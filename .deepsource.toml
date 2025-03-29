@@ -1,5 +1,4 @@
 version = 1
 
 [[analyzers]]
-name = "c"
-enabled = true
+name = "cxx"
