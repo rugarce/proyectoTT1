@@ -26,7 +26,7 @@ double& Matrix::operator () (const int row, const int column) {
         exit(EXIT_FAILURE);
 	}
 	
-	return this->data[row - 1][column - 1];
+	return this->data[row-1][column-1];
 }
 
 Matrix& Matrix::operator + (Matrix &m) {
@@ -85,7 +85,6 @@ Matrix& zeros(const int n_row, const int n_column) {
 	return (*m_aux);
 }
 
-// Operador de multiplicación de matrices
 Matrix& Matrix::operator * (Matrix &m) {
     if (this->n_column != m.n_row) {
         cout << "Matrix multiplication: error in dimensions\n";
@@ -96,7 +95,7 @@ Matrix& Matrix::operator * (Matrix &m) {
 
     for (int i = 1; i <= this->n_row; i++) {
         for (int j = 1; j <= m.n_column; j++) {
-            (*m_aux)(i, j) = 0; // Inicializa el valor de la celda
+            (*m_aux)(i, j) = 0;
             for (int k = 1; k <= this->n_column; k++) {
                 (*m_aux)(i, j) += (*this)(i, k) * m(k, j);
             }
@@ -106,29 +105,25 @@ Matrix& Matrix::operator * (Matrix &m) {
     return *m_aux;
 }
 
-// Operador de división de matrices (usando la inversa)
 Matrix& Matrix::operator / (Matrix &m) {
     if (this->n_row != m.n_row || this->n_column != m.n_column) {
         cout << "Matrix division: error in dimensions\n";
         exit(EXIT_FAILURE);
     }
 
-    Matrix m_inv = m.inv(); // Calculamos la inversa de la matriz m
+    Matrix m_inv = m.inv(); 
 
-    return *this * m_inv; // Multiplicamos por la inversa
+    return *this * m_inv; 
 }
 
-// Operador de asignación
-Matrix& Matrix::operator = (const Matrix &m) {
-    if (this == &m) return *this; // Evitar asignación a sí misma
+Matrix& Matrix::operator = (Matrix &m) {
+    if (this == &m) return *this;
 
-    // Liberar memoria actual
     for (int i = 0; i < this->n_row; i++) {
         free(this->data[i]);
     }
     free(this->data);
 
-    // Asignar nuevas dimensiones y memoria
     this->n_row = m.n_row;
     this->n_column = m.n_column;
     this->data = (double **)malloc(this->n_row * sizeof(double *));
@@ -146,7 +141,6 @@ Matrix& Matrix::operator = (const Matrix &m) {
         }
     }
 
-    // Copiar los datos de la matriz m
     for (int i = 1; i <= this->n_row; i++) {
         for (int j = 1; j <= this->n_column; j++) {
             (*this)(i, j) = m(i, j);
@@ -156,7 +150,6 @@ Matrix& Matrix::operator = (const Matrix &m) {
     return *this;
 }
 
-// Método para matriz identidad
 Matrix& Matrix::eye(const int n) {
     Matrix *m_aux = new Matrix(n, n);
     
@@ -169,7 +162,6 @@ Matrix& Matrix::eye(const int n) {
     return *m_aux;
 }
 
-// Método para la traspuesta
 Matrix& Matrix::transpose() {
     Matrix *m_aux = new Matrix(this->n_column, this->n_row);
 
@@ -182,7 +174,6 @@ Matrix& Matrix::transpose() {
     return *m_aux;
 }
 
-// Método para la inversa (usando el algoritmo de Gauss-Jordan)
 Matrix& Matrix::inv() {
     if (this->n_row != this->n_column) {
         cout << "Matrix inverse: matrix must be square\n";
@@ -237,4 +228,58 @@ Matrix& Matrix::inv() {
     }
 
     return *I;
+}
+
+
+Matrix& Matrix::operator + (double scalar) {
+    Matrix* m_aux = new Matrix(this->n_row, this->n_column);
+
+    for (int i = 1; i <= this->n_row; i++) {
+        for (int j = 1; j <= this->n_column; j++) {
+            (*m_aux)(i, j) = (*this)(i, j) + scalar;
+        }
+    }
+
+    return *m_aux;
+}
+
+Matrix& Matrix::operator - (double scalar) {
+    Matrix* m_aux = new Matrix(this->n_row, this->n_column);
+
+    for (int i = 1; i <= this->n_row; i++) {
+        for (int j = 1; j <= this->n_column; j++) {
+            (*m_aux)(i, j) = (*this)(i, j) - scalar;
+        }
+    }
+
+    return *m_aux;
+}
+
+Matrix& Matrix::operator * (double scalar) {
+    Matrix* m_aux = new Matrix(this->n_row, this->n_column);
+
+    for (int i = 1; i <= this->n_row; i++) {
+        for (int j = 1; j <= this->n_column; j++) {
+            (*m_aux)(i, j) = (*this)(i, j) * scalar;
+        }
+    }
+
+    return *m_aux;
+}
+
+Matrix& Matrix::operator / (double scalar) {
+    if (fabs(scalar) < 1e-12) {
+        cout << "Matrix division: division by zero error\n";
+        exit(EXIT_FAILURE);
+    }
+
+    Matrix* m_aux = new Matrix(this->n_row, this->n_column);
+
+    for (int i = 1; i <= this->n_row; i++) {
+        for (int j = 1; j <= this->n_column; j++) {
+            (*m_aux)(i, j) = (*this)(i, j) / scalar;
+        }
+    }
+
+    return *m_aux;
 }
