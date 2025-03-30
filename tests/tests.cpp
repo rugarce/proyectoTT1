@@ -133,10 +133,15 @@ int m_div_01() {
 	
 	Matrix C(f, c);
 	C(1,1) = -28; C(1,2) = 8; C(1,3) = -6;
-	C(2,1) = 1/2; C(2,2) = 0; C(2,3) = 1/3;
-	C(3,1) = 0; C(3,2) = 0; C(3,3) = -1/3; 
+	C(2,1) = 0.5; C(2,2) = 0; C(2,3) = 0.3333333333333;
+	C(3,1) = 0; C(3,2) = 0; C(3,3) = -0.333333333333; 
 	
 	Matrix R = A / B;
+
+    cout << "A\n" << A << "\n";
+    cout << "B\n" << B << "\n";
+    cout << "R\n" << R << "\n";
+    cout << "R\n" << C << "\n";
     
     _assert(m_equals(C, R, 1e-10));
     
@@ -243,6 +248,7 @@ int all_tests()
 	_verify(m_sub_scalar_01);
 	_verify(m_mul_scalar_01);
 	_verify(m_div_scalar_01);
+    _verify(m_div_01);
 
     return 0;
 }
