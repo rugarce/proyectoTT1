@@ -15,9 +15,12 @@ public:
 
     // Parameterized constructor
     Matrix(const int n_row, const int n_column);
+	Matrix(const int v_size);
+
 	
 	// Member operators
 	double& operator () (const int row, const int column);
+	double& operator () (const int n);
 	Matrix& operator + (Matrix &m);
 	Matrix& operator - (Matrix &m);
 	Matrix& operator * (Matrix &m);  
@@ -26,11 +29,7 @@ public:
 	Matrix& operator * (double scalar);
 	Matrix& operator + (double scalar);
 	Matrix& operator - (double scalar);
-	Matrix& operator / (double scalar);
-
-	Matrix& eye(const int n); 
-    Matrix& transpose();      
-    Matrix& inv();          
+	Matrix& operator / (double scalar);         
 	
 	// Non-member operators
 	friend ostream& operator << (ostream &o, Matrix &m);
@@ -41,5 +40,8 @@ ostream& operator << (ostream &o, Matrix &m);
 
 // Methods
 Matrix& zeros(const int n_row, const int n_column);
+Matrix& eye(const int n); 
+Matrix& transpose(Matrix &m);      
+Matrix& inv(Matrix &m); 
 
 #endif
