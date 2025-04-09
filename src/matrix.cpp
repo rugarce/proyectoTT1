@@ -1,4 +1,4 @@
-#include "..\include\matrix.h"
+#include "..\include\matrix.hpp"
 
 Matrix::Matrix(const int n_row, const int n_column)
 {
@@ -136,6 +136,18 @@ Matrix &zeros(const int n_row, const int n_column)
     return (*m_aux);
 }
 
+Matrix &zeros(const int n)
+{
+    Matrix *m_aux = new Matrix(n);
+
+    for (int i = 1; i <= n; i++)
+    {
+        (*m_aux)(1, i) = 0;
+    }
+
+    return (*m_aux);
+}
+
 Matrix &Matrix::operator*(Matrix &m)
 {
     if (this->n_column != m.n_row)
@@ -246,7 +258,7 @@ Matrix &transpose(Matrix &m)
     return *m_aux;
 }
 
-Matrix &inv(Matrix &m)
+Matrix inv(Matrix &m)
 {
     if (m.n_row != m.n_column)
     {
@@ -264,10 +276,8 @@ Matrix &inv(Matrix &m)
         }
     }
 
-
     // Crear la matriz identidad
-    Matrix I(m.n_row, m.n_column);
-    I.eye(m.n_row);
+    Matrix I = eye(m.n_row);
 
     // Gauss-Jordan
     for (int i = 1; i <= m.n_row; i++)
@@ -283,7 +293,7 @@ Matrix &inv(Matrix &m)
         for (int j = 1; j <= m.n_column; j++)
         {
             (*m_aux)(i, j) /= pivot;
-            (*I)(i, j) /= pivot;
+            (I)(i, j) /= pivot;
         }
 
         // Hacer cero debajo del pivote
@@ -293,7 +303,7 @@ Matrix &inv(Matrix &m)
             for (int k = 1; k <= m.n_column; k++)
             {
                 (*m_aux)(j, k) -= factor * (*m_aux)(i, k);
-                (*I)(j, k) -= factor * (*I)(i, k);
+                (I)(j, k) -= factor * (I)(i, k);
             }
         }
     }
@@ -307,12 +317,12 @@ Matrix &inv(Matrix &m)
             for (int k = 1; k <= m.n_column; k++)
             {
                 (*m_aux)(j, k) -= factor * (*m_aux)(i, k);
-                (*I)(j, k) -= factor * (*I)(i, k);
+                (I)(j, k) -= factor * (I)(i, k);
             }
         }
     }
 
-    return *I;
+    return I;
 }
 
 Matrix &Matrix::operator+(double scalar)
@@ -380,3 +390,179 @@ Matrix &Matrix::operator/(double scalar)
 
     return *m_aux;
 }
+
+double norm(Matrix &v)
+{
+    if (v.n_row != 1)
+    {
+        cout << "Norm: input is not a vector\n";
+        exit(EXIT_FAILURE);
+    }
+
+    double sum = 0.0;
+    for (int i = 1; i <= v.n_column; i++)
+    {
+        sum += v(i) * v(i);
+    }
+
+    return sqrt(sum);
+}
+
+double dot(Matrix &a, Matrix &b)
+{
+    if (a.n_row != 1 || b.n_row != 1 || a.n_column != b.n_column)
+    {
+        cout << "Dot: vectors incompatible\n";
+        exit(EXIT_FAILURE);
+    }
+
+    double sum = 0.0;
+    for (int i = 1; i <= a.n_column; i++)
+    {
+        sum += a(i) * b(i);
+    }
+
+    return sum;
+}
+
+Matrix &cross(Matrix &a, Matrix &b)
+{
+    if (a.n_row != 1 || b.n_row != 1 || a.n_column != 3 || b.n_column != 3)
+    {
+        cout << "Cross: only defined for 3D vectors\n";
+        exit(EXIT_FAILURE);
+    }
+
+    Matrix *m_aux = new Matrix(3);
+
+    (*m_aux)(1) = a(2) * b(3) - a(3) * b(2);
+    (*m_aux)(2) = a(3) * b(1) - a(1) * b(3);
+    (*m_aux)(3) = a(1) * b(2) - a(2) * b(1);
+
+    return *m_aux;
+}
+
+Matrix& extract_vector(Matrix &m, const int n, const int k)
+{
+    if (m.n_row != 1 || n < 1 || k > m.n_column || n > k) 
+    {
+        cout << "extract_vector: Invalid indices\n";
+        exit(EXIT_FAILURE);
+    }
+
+    Matrix *vector = new Matrix(k - n + 1);
+
+    for (int i = n; i <= k; i++)
+    {
+        (*vector)(i - n + 1) = m(i);
+    }
+
+    return *vector;
+}
+
+Matrix& extract_row(Matrix &m, const int n)
+{
+    if (n < 1 || n > m.n_row)
+    {
+        cout << "extract_row: Invalid row index\n";
+        exit(EXIT_FAILURE);
+    }
+
+    Matrix *row = new Matrix(m.n_column);
+
+    // Copiar la fila
+    for (int j = 1; j <= m.n_column; j++)
+    {
+        (*row)(j) = m(n, j);
+    }
+
+    return *row;
+}
+
+Matrix& extract_column(Matrix &m, const int n)
+{
+    if (n < 1 || n > m.n_column)
+    {
+        cout << "extract_column: Invalid column index\n";
+        exit(EXIT_FAILURE);
+    }
+
+    Matrix *column = new Matrix(m.n_row);
+
+    for (int i = 1; i <= m.n_row; i++)
+    {
+        (*column)(i) = m(i, n);
+    }
+
+    return *column;
+}
+
+Matrix& union_vector(Matrix &m, Matrix &k)
+{
+    if (m.n_row != 1 || k.n_row != 1)
+    {
+        cout << "union_vector: Both matrices must be row vectors\n";
+        exit(EXIT_FAILURE);
+    }
+
+    Matrix *result = new Matrix(m.n_column + k.n_column);
+
+    for (int i = 1; i <= m.n_column; i++)
+    {
+        (*result)(i) = m(i);
+    }
+
+    for (int i = 1; i <= k.n_column; i++)
+    {
+        (*result)(m.n_column + i) = k(i);
+    }
+
+    return *result;
+}
+
+Matrix& assign_column(Matrix &m, Matrix &k, const int n)
+{
+    if (k.n_column != m.n_row || k.n_row != 1)
+    {
+        cout << "assign_column: The input must be a column vector\n";
+        exit(EXIT_FAILURE);
+    }
+
+    if (n < 1 || n > m.n_column)
+    {
+        cout << "assign_column: Invalid column index\n";
+        exit(EXIT_FAILURE);
+    }
+
+    for (int i = 1; i <= m.n_row; i++)
+    {
+        m(i, n) = k(i);
+    }
+
+    return m;
+}
+
+Matrix& assign_row(Matrix &m, Matrix &k, const int n)
+{
+    if (k.n_column != m.n_column || k.n_row != 1)
+    {
+        cout << "assign_row: The input must be a row vector\n";
+        exit(EXIT_FAILURE);
+    }
+
+    if (n < 1 || n > m.n_row)
+    {
+        cout << "assign_row: Invalid row index\n";
+        exit(EXIT_FAILURE);
+    }
+
+    for (int i = 1; i <= m.n_column; i++)
+    {
+        m(n, i) = k(i);
+    }
+
+    return m;
+}
+
+
+
