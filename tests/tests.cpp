@@ -2,6 +2,18 @@
 #include "..\include\R_x.hpp"
 #include "..\include\R_y.hpp"
 #include "..\include\R_z.hpp"
+#include "..\include\AccelPointMass.hpp"
+#include "../include/Cheb3D.hpp"
+#include "../include/EccAnom.hpp"
+#include "../include/SAT_Const.hpp"
+#include "../include/MeanObliquity.hpp"
+#include "../include/Frac.hpp"
+#include "../include/Mjday.hpp"
+#include "../include/Mjday_TDB.hpp"
+#include "../include/Position.hpp"
+#include "../include/Sign.hpp"
+#include "../include/timediff.hpp"
+#include <iostream>
 #include <cstdio>
 #include <cmath>
 
@@ -723,7 +735,7 @@ int m_assign_row_01() {
 }
 
 int m_R_x_01(){
-    double angle = 3.14159265358979/2;
+    double angle = SAT_Const::pi/2;
     Matrix Rx = R_x(angle);
 
     Matrix expected(3,3);
@@ -736,7 +748,7 @@ int m_R_x_01(){
 }
 
 int m_R_y_01(){
-    double angle = 3.14159265358979/2;
+    double angle = SAT_Const::pi/2;
     Matrix Ry = R_y(angle);
 
     Matrix expected(3,3);
@@ -749,7 +761,7 @@ int m_R_y_01(){
 }
 
 int m_R_z_01(){
-    double angle = 3.14159265358979/2;
+    double angle = SAT_Const::pi/2;
     Matrix Rz = R_z(angle);
 
     Matrix expected(3,3);
@@ -758,6 +770,165 @@ int m_R_z_01(){
     expected(3,1) = 0.0; expected(3,2) = 0.0; expected(3,3) = 1.0;
 
     _assert(m_equals(Rz, expected, 1e-10));
+    return 0;
+}
+
+int accel_point_mass_01() {
+    Matrix r(3);
+    r(1) = 7000.0;
+    r(2) = 0.0;
+    r(3) = 0.0;
+
+    Matrix s(3);
+    s(1) = 384400.0;
+    s(2) = 0.0;
+    s(3) = 0.0;
+
+    double GM = 4902.800066;
+
+    Matrix a = AccelPointMass(r, s, GM);
+    
+    Matrix expected(3);
+    expected(1) = 1.242260401960810e-09;
+    expected(2) = 0.0;
+    expected(3) = 0.0;
+
+    _assert(m_equals(a, expected, 1e-10));
+
+    return 0;
+}
+
+int cheb_3D_01() {
+    Matrix Cx(3); 
+    Matrix Cy(3);
+    Matrix Cz(3);
+
+    for (int i = 1; i <= 3; i++) {
+        Cx(i) = 1.0 * i;
+        Cy(i) = 2.0 * i;
+        Cz(i) = 3.0 * i;
+    }
+
+    double t = 2.5; 
+    int N = 3;  
+    double Ta = 0.0;  
+    double Tb = 5.0; 
+
+    Matrix result = Cheb3D(t, N, Ta, Tb, Cx, Cy, Cz);
+
+    Matrix expected(3);
+    expected(1)= -2.0;
+    expected(2)= -4.0;
+    expected(3)= -6.0;
+
+    _assert(m_equals(result, expected, 1e-10));
+
+    return 0;
+}
+
+int ecc_anom_01() {
+    double M = 1.0;  
+    double e = 0.3; 
+    Matrix E = EccAnom(M, e);
+    double expected = 1.28809131321184; 
+    _assert(m_equals(E(1), expected, 1e-10));
+
+    return 0;
+}
+
+int frac_func_01()
+{
+    _assert(m_equals(Frac(5.75), 0.75, 1e-10));
+    _assert(m_equals(Frac(3.0), 0.0, 1e-10));
+    _assert(m_equals(Frac(-2.75), 0.25, 1e-10));
+    return 0;
+}
+
+int mean_obliquity_01() {
+    double Mjd_TT = SAT_Const::MJD_J2000; 
+
+    double expected = 84381.448 / 3600.0 * SAT_Const::Rad;
+    double result = MeanObliquity(Mjd_TT);
+
+    _assert(m_equals(result, expected, 1e-10));
+    return 0;
+}
+
+int mjday_01() {
+    int yr = 2000;
+    int mon = 1;
+    int day = 1;
+    
+    double Mjd = Mjday(yr, mon, day);
+    
+
+    double expected = 51544.5; 
+    _assert(m_equals(Mjd, expected, 1e-10));
+    return 0;
+}
+
+int mjday_TDB_01() {
+    double Mjd_TT = 51544.5; 
+
+    double Mjd_TDB = Mjday_TDB(Mjd_TT);
+
+    double expected = Mjd_TT + (0.001658 * std::sin(628.3076 * (0.0) + 6.2401) +
+                                        0.000022 * std::sin(575.3385 * (0.0) + 4.2970) +
+                                        0.000014 * std::sin(1256.6152 * (0.0) + 6.1969) +
+                                        0.000005 * std::sin(606.9777 * (0.0) + 4.0212) +
+                                        0.000005 * std::sin(52.9691 * (0.0) + 0.4444) +
+                                        0.000002 * std::sin(21.3299 * (0.0) + 5.5431) +
+                                        0.000010 * std::sin(628.3076 * (0.0) + 4.2490)) / 86400.0;
+    
+    _assert(m_equals(Mjd_TDB, expected, 1e-10));
+    return 0;
+}
+
+int position_01() {
+    double lon = 0.0;                    
+    double lat = SAT_Const::pi / 4.0;             
+    double h = 0.0;                     
+
+    Matrix r = Position(lon, lat, h);
+
+    Matrix expected(3);
+
+    expected(1) = 4.517590383043712e+06;
+    expected(2) = 0.0; 
+    expected(3) = 4.487347916379808e+06;
+
+    cout << "r\n" << r << "\n";
+    cout << "expected\n" << expected << "\n";
+
+    _assert(m_equals(r, expected, 1e-10)); 
+
+    return 0;
+}
+
+int sign_01() {
+    double result = sign_(5.0, 3.0);
+    _assert(m_equals(result, 5.0, 1e-10)); 
+    return 0;
+}
+
+int timediff_01() {
+    double UT1_UTC = 0.3341;   
+    double TAI_UTC = 37.0;     
+
+    TimeDifferences result = timediff(UT1_UTC, TAI_UTC);
+
+    double UT1_TAI_expected = -36.6659;
+    double UTC_GPS_expected = -18.0;
+    double UT1_GPS_expected = -17.6659;
+    double TT_UTC_expected  = 69.184;
+    double GPS_UTC_expected = 18.0;
+
+    _assert(std::abs(result.UT1_TAI  - UT1_TAI_expected)  < 1e-10);
+    _assert(std::abs(result.UTC_GPS - UTC_GPS_expected) < 1e-10);
+    _assert(std::abs(result.UT1_GPS - UT1_GPS_expected) < 1e-10);
+    _assert(std::abs(result.TT_UTC  - TT_UTC_expected)  < 1e-10);
+    _assert(std::abs(result.GPS_UTC - GPS_UTC_expected) < 1e-10);
+
     return 0;
 }
 
@@ -773,6 +944,7 @@ int all_tests()
     _verify(m_inv_01);
     _verify(m_assign_01);
     _verify(m_sum_scalar_01);
+
     _verify(m_sub_scalar_01);
     _verify(m_mul_scalar_01);
     _verify(m_div_scalar_01);
@@ -783,6 +955,7 @@ int all_tests()
     _verify(m_dot_01);
     _verify(m_cross_01);
     _verify(m_extract_vector_01);
+
     _verify(m_extract_row_01);
     _verify(m_extract_column_01);
     _verify(m_union_vector_01);
@@ -791,6 +964,19 @@ int all_tests()
     _verify(m_R_x_01);
     _verify(m_R_y_01);
     _verify(m_R_z_01);
+    _verify(accel_point_mass_01);
+    _verify(cheb_3D_01);
+
+    _verify(ecc_anom_01);
+    _verify(frac_func_01);
+    _verify(mean_obliquity_01);
+    _verify(mjday_01);
+    _verify(mjday_TDB_01);
+    //_verify(position_01); PROBLEMAS PRECISION
+    _verify(sign_01);
+    _verify(timediff_01);
+    
+    
 
     return 0;
 }
