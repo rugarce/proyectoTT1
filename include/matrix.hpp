@@ -16,6 +16,7 @@ public:
     // Parameterized constructor
     Matrix(const int n_row, const int n_column);
 	Matrix(const int v_size);
+	Matrix();
 
 	
 	// Member operators

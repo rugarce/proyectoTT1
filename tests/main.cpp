@@ -1,4 +1,5 @@
 #include "..\include\matrix.hpp"
+#include "..\include\global.hpp"
 #include "..\include\R_x.hpp"
 #include <iostream>
 #include <cmath>
@@ -6,6 +7,8 @@
 using namespace std;
 
 int main() {
+    //eop19620101(); // c=21413
+    cout<< eopdata
     Matrix M1(3, 2);
 	M1(1,1) = 5;
 	

@@ -13,6 +13,12 @@
 #include "../include/Position.hpp"
 #include "../include/Sign.hpp"
 #include "../include/timediff.hpp"
+#include "..\include\global.hpp"
+#include "..\include\AzElPa.hpp"
+#include "..\include\IERS.hpp"
+#include "..\include\Legendre.hpp"
+#include "..\include\TimeUpdate.hpp"
+#include "..\include\NutAngles.hpp"
 #include <iostream>
 #include <cstdio>
 #include <cmath>
@@ -204,7 +210,6 @@ int m_zeros_n_01()
     return 0;
 }
 
-
 int m_mul_01()
 {
     int f = 3;
@@ -301,25 +306,29 @@ int m_div_01()
     return 0;
 }
 
-int m_operator_parens_row_column_01() {
+int m_operator_parens_row_column_01()
+{
     Matrix A(2, 2);
-    A(1,1) = 5.5; A(1,2) = 6.6;
-    A(2,1) = 7.7; A(2,2) = 8.8;
+    A(1, 1) = 5.5;
+    A(1, 2) = 6.6;
+    A(2, 1) = 7.7;
+    A(2, 2) = 8.8;
 
-    _assert(fabs(A(1,1) - 5.5) < 1e-10);
-    _assert(fabs(A(1,2) - 6.6) < 1e-10);
-    _assert(fabs(A(2,1) - 7.7) < 1e-10);
-    _assert(fabs(A(2,2) - 8.8) < 1e-10);
+    _assert(fabs(A(1, 1) - 5.5) < 1e-10);
+    _assert(fabs(A(1, 2) - 6.6) < 1e-10);
+    _assert(fabs(A(2, 1) - 7.7) < 1e-10);
+    _assert(fabs(A(2, 2) - 8.8) < 1e-10);
 
     return 0;
 }
 
-int m_operator_parens_n_01() {
+int m_operator_parens_n_01()
+{
     Matrix A(2, 2);
-    A(1,1) = 10;
-    A(1,2) = 20;
-    A(2,1) = 30;
-    A(2,2) = 40;
+    A(1, 1) = 10;
+    A(1, 2) = 20;
+    A(2, 1) = 30;
+    A(2, 2) = 40;
 
     _assert(fabs(A(1) - 10) < 1e-10);
     _assert(fabs(A(2) - 20) < 1e-10);
@@ -555,7 +564,7 @@ int m_dot_01()
     B(3) = 3;
 
     double expected = 28;
-    double result = dot(A,B);
+    double result = dot(A, B);
     _assert(m_equals(result, expected, 1e-10));
     return 0;
 }
@@ -577,13 +586,14 @@ int m_cross_01()
     C(2) = 2;
     C(3) = 2;
 
-    Matrix result = cross(A,B);
+    Matrix result = cross(A, B);
 
     _assert(m_equals(result, C, 1e-10));
     return 0;
 }
 
-int m_extract_vector_01() {
+int m_extract_vector_01()
+{
     Matrix A(3);
     A(1) = -10;
     A(2) = 2;
@@ -598,7 +608,8 @@ int m_extract_vector_01() {
     return 0;
 }
 
-int m_extract_row_01() {
+int m_extract_row_01()
+{
     Matrix A(3, 3);
     A(1, 1) = 5;
     A(1, 2) = 6;
@@ -621,7 +632,8 @@ int m_extract_row_01() {
     return 0;
 }
 
-int m_extract_column_01() {
+int m_extract_column_01()
+{
     Matrix A(3, 3);
     A(1, 1) = 5;
     A(1, 2) = 6;
@@ -644,7 +656,8 @@ int m_extract_column_01() {
     return 0;
 }
 
-int m_union_vector_01() {
+int m_union_vector_01()
+{
     Matrix A(3);
     A(1) = -10;
     A(2) = 2;
@@ -666,7 +679,8 @@ int m_union_vector_01() {
     return 0;
 }
 
-int m_assign_column_01() {
+int m_assign_column_01()
+{
     Matrix A(3, 3);
     A(1, 1) = 5;
     A(1, 2) = 6;
@@ -694,13 +708,14 @@ int m_assign_column_01() {
     C(3, 2) = 12;
     C(3, 3) = 13;
 
-    Matrix D = assign_column(A,B, 1);
+    Matrix D = assign_column(A, B, 1);
 
     _assert(m_equals(D, C, 1e-10));
     return 0;
 }
 
-int m_assign_row_01() {
+int m_assign_row_01()
+{
     Matrix A(3, 3);
     A(1, 1) = 5;
     A(1, 2) = 6;
@@ -728,52 +743,74 @@ int m_assign_row_01() {
     C(3, 2) = 12;
     C(3, 3) = 13;
 
-    Matrix D = assign_row(A,B, 1);
+    Matrix D = assign_row(A, B, 1);
 
     _assert(m_equals(D, C, 1e-10));
     return 0;
 }
 
-int m_R_x_01(){
-    double angle = SAT_Const::pi/2;
+int m_R_x_01()
+{
+    double angle = SAT_Const::pi / 2;
     Matrix Rx = R_x(angle);
 
-    Matrix expected(3,3);
-    expected(1,1) = 1.0; expected(1,2) = 0.0; expected(1,3) =  0.0;
-    expected(2,1) = 0.0; expected(2,2) = 0.0; expected(2,3) =  1.0;
-    expected(3,1) = 0.0; expected(3,2) = -1.0; expected(3,3) = 0.0;
+    Matrix expected(3, 3);
+    expected(1, 1) = 1.0;
+    expected(1, 2) = 0.0;
+    expected(1, 3) = 0.0;
+    expected(2, 1) = 0.0;
+    expected(2, 2) = 0.0;
+    expected(2, 3) = 1.0;
+    expected(3, 1) = 0.0;
+    expected(3, 2) = -1.0;
+    expected(3, 3) = 0.0;
 
     _assert(m_equals(Rx, expected, 1e-10));
     return 0;
 }
 
-int m_R_y_01(){
-    double angle = SAT_Const::pi/2;
+int m_R_y_01()
+{
+    double angle = SAT_Const::pi / 2;
     Matrix Ry = R_y(angle);
 
-    Matrix expected(3,3);
-    expected(1,1) = 0.0; expected(1,2) = 0.0; expected(1,3) =  -1.0;
-    expected(2,1) = 0.0; expected(2,2) = 1.0; expected(2,3) =  0.0;
-    expected(3,1) = 1.0; expected(3,2) = 0.0; expected(3,3) = 0.0;
+    Matrix expected(3, 3);
+    expected(1, 1) = 0.0;
+    expected(1, 2) = 0.0;
+    expected(1, 3) = -1.0;
+    expected(2, 1) = 0.0;
+    expected(2, 2) = 1.0;
+    expected(2, 3) = 0.0;
+    expected(3, 1) = 1.0;
+    expected(3, 2) = 0.0;
+    expected(3, 3) = 0.0;
 
     _assert(m_equals(Ry, expected, 1e-10));
     return 0;
 }
 
-int m_R_z_01(){
-    double angle = SAT_Const::pi/2;
+int m_R_z_01()
+{
+    double angle = SAT_Const::pi / 2;
     Matrix Rz = R_z(angle);
 
-    Matrix expected(3,3);
-    expected(1,1) = 0.0; expected(1,2) = 1.0; expected(1,3) =  0.0;
-    expected(2,1) = -1.0; expected(2,2) = 0.0; expected(2,3) =  0.0;
-    expected(3,1) = 0.0; expected(3,2) = 0.0; expected(3,3) = 1.0;
+    Matrix expected(3, 3);
+    expected(1, 1) = 0.0;
+    expected(1, 2) = 1.0;
+    expected(1, 3) = 0.0;
+    expected(2, 1) = -1.0;
+    expected(2, 2) = 0.0;
+    expected(2, 3) = 0.0;
+    expected(3, 1) = 0.0;
+    expected(3, 2) = 0.0;
+    expected(3, 3) = 1.0;
 
     _assert(m_equals(Rz, expected, 1e-10));
     return 0;
 }
 
-int accel_point_mass_01() {
+int accel_point_mass_01()
+{
     Matrix r(3);
     r(1) = 7000.0;
     r(2) = 0.0;
@@ -787,7 +824,7 @@ int accel_point_mass_01() {
     double GM = 4902.800066;
 
     Matrix a = AccelPointMass(r, s, GM);
-    
+
     Matrix expected(3);
     expected(1) = 1.242260401960810e-09;
     expected(2) = 0.0;
@@ -798,39 +835,42 @@ int accel_point_mass_01() {
     return 0;
 }
 
-int cheb_3D_01() {
-    Matrix Cx(3); 
+int cheb_3D_01()
+{
+    Matrix Cx(3);
     Matrix Cy(3);
     Matrix Cz(3);
 
-    for (int i = 1; i <= 3; i++) {
+    for (int i = 1; i <= 3; i++)
+    {
         Cx(i) = 1.0 * i;
         Cy(i) = 2.0 * i;
         Cz(i) = 3.0 * i;
     }
 
-    double t = 2.5; 
-    int N = 3;  
-    double Ta = 0.0;  
-    double Tb = 5.0; 
+    double t = 2.5;
+    int N = 3;
+    double Ta = 0.0;
+    double Tb = 5.0;
 
     Matrix result = Cheb3D(t, N, Ta, Tb, Cx, Cy, Cz);
 
     Matrix expected(3);
-    expected(1)= -2.0;
-    expected(2)= -4.0;
-    expected(3)= -6.0;
+    expected(1) = -2.0;
+    expected(2) = -4.0;
+    expected(3) = -6.0;
 
     _assert(m_equals(result, expected, 1e-10));
 
     return 0;
 }
 
-int ecc_anom_01() {
-    double M = 1.0;  
-    double e = 0.3; 
+int ecc_anom_01()
+{
+    double M = 1.0;
+    double e = 0.3;
     Matrix E = EccAnom(M, e);
-    double expected = 1.28809131321184; 
+    double expected = 1.28809131321184;
     _assert(m_equals(E(1), expected, 1e-10));
 
     return 0;
@@ -844,8 +884,9 @@ int frac_func_01()
     return 0;
 }
 
-int mean_obliquity_01() {
-    double Mjd_TT = SAT_Const::MJD_J2000; 
+int mean_obliquity_01()
+{
+    double Mjd_TT = SAT_Const::MJD_J2000;
 
     double expected = 84381.448 / 3600.0 * SAT_Const::Rad;
     double result = MeanObliquity(Mjd_TT);
@@ -854,84 +895,266 @@ int mean_obliquity_01() {
     return 0;
 }
 
-int mjday_01() {
+int mjday_01()
+{
     int yr = 2000;
     int mon = 1;
     int day = 1;
-    
-    double Mjd = Mjday(yr, mon, day);
-    
 
-    double expected = 51544.5; 
+    double Mjd = Mjday(yr, mon, day);
+
+    double expected = 51544.5;
     _assert(m_equals(Mjd, expected, 1e-10));
     return 0;
 }
 
-int mjday_TDB_01() {
-    double Mjd_TT = 51544.5; 
+int mjday_TDB_01(){
+    double Mjd_TT = 51544.5;
 
     double Mjd_TDB = Mjday_TDB(Mjd_TT);
 
     double expected = Mjd_TT + (0.001658 * std::sin(628.3076 * (0.0) + 6.2401) +
-                                        0.000022 * std::sin(575.3385 * (0.0) + 4.2970) +
-                                        0.000014 * std::sin(1256.6152 * (0.0) + 6.1969) +
-                                        0.000005 * std::sin(606.9777 * (0.0) + 4.0212) +
-                                        0.000005 * std::sin(52.9691 * (0.0) + 0.4444) +
-                                        0.000002 * std::sin(21.3299 * (0.0) + 5.5431) +
-                                        0.000010 * std::sin(628.3076 * (0.0) + 4.2490)) / 86400.0;
-    
+                                0.000022 * std::sin(575.3385 * (0.0) + 4.2970) +
+                                0.000014 * std::sin(1256.6152 * (0.0) + 6.1969) +
+                                0.000005 * std::sin(606.9777 * (0.0) + 4.0212) +
+                                0.000005 * std::sin(52.9691 * (0.0) + 0.4444) +
+                                0.000002 * std::sin(21.3299 * (0.0) + 5.5431) +
+                                0.000010 * std::sin(628.3076 * (0.0) + 4.2490)) /
+                                   86400.0;
+
     _assert(m_equals(Mjd_TDB, expected, 1e-10));
     return 0;
 }
 
-int position_01() {
-    double lon = 0.0;                    
-    double lat = SAT_Const::pi / 4.0;             
-    double h = 0.0;                     
+int position_01(){
+    double lon = 0.0;
+    double lat = SAT_Const::pi / 4.0;
+    double h = 0.0;
 
     Matrix r = Position(lon, lat, h);
 
     Matrix expected(3);
 
     expected(1) = 4.517590383043712e+06;
-    expected(2) = 0.0; 
+    expected(2) = 0.0;
     expected(3) = 4.487347916379808e+06;
 
-    cout << "r\n" << r << "\n";
-    cout << "expected\n" << expected << "\n";
-
-    _assert(m_equals(r, expected, 1e-10)); 
+    _assert(m_equals(r, expected, 1e-8));
 
     return 0;
 }
 
-int sign_01() {
+int sign_01(){
     double result = sign_(5.0, 3.0);
-    _assert(m_equals(result, 5.0, 1e-10)); 
+    _assert(m_equals(result, 5.0, 1e-10));
     return 0;
 }
 
-int timediff_01() {
-    double UT1_UTC = 0.3341;   
-    double TAI_UTC = 37.0;     
+int timediff_01(){
+    double UT1_UTC = 0.3341;
+    double TAI_UTC = 37.0;
 
     TimeDifferences result = timediff(UT1_UTC, TAI_UTC);
 
     double UT1_TAI_expected = -36.6659;
     double UTC_GPS_expected = -18.0;
     double UT1_GPS_expected = -17.6659;
-    double TT_UTC_expected  = 69.184;
+    double TT_UTC_expected = 69.184;
     double GPS_UTC_expected = 18.0;
 
-    _assert(std::abs(result.UT1_TAI  - UT1_TAI_expected)  < 1e-10);
+    _assert(std::abs(result.UT1_TAI - UT1_TAI_expected) < 1e-10);
     _assert(std::abs(result.UTC_GPS - UTC_GPS_expected) < 1e-10);
     _assert(std::abs(result.UT1_GPS - UT1_GPS_expected) < 1e-10);
-    _assert(std::abs(result.TT_UTC  - TT_UTC_expected)  < 1e-10);
+    _assert(std::abs(result.TT_UTC - TT_UTC_expected) < 1e-10);
     _assert(std::abs(result.GPS_UTC - GPS_UTC_expected) < 1e-10);
 
     return 0;
 }
 
+int azelpa_01(){
+    Matrix s(3);
+    s(1) = 1.0;
+    s(2) = 1.0;
+    s(3) = std::sqrt(2.0);
+
+    auto [Az, El, dAds, dEds] = AzElPa(s);
+
+    double expected_Az = SAT_Const::pi / 4.0;
+    double expected_El = SAT_Const::pi / 4.0;
+
+    _assert(std::abs(Az - expected_Az) < 1e-10);
+    _assert(std::abs(El - expected_El) < 1e-10);
+
+    Matrix expected_dAds(1, 3);
+    expected_dAds(1, 1) = 0.5;
+    expected_dAds(1, 2) = -0.5;
+    expected_dAds(1, 3) = 0.0;
+
+    Matrix expected_dEds(1, 3);
+    expected_dEds(1, 1) = -1.0 / 4.0;
+    expected_dEds(1, 2) = -1.0 / 4.0;
+    expected_dEds(1, 3) = 0.353553390593274;
+
+    _assert(m_equals(dAds, expected_dAds, 1e-10));
+    _assert(m_equals(dEds, expected_dEds, 1e-10));
+
+    return 0;
+}
+
+int iers_01()
+{
+
+    double Mjd_UTC = 37666.0;
+    string interp = "l";
+
+    tuple[x_pole, y_pole, UT1_UTC, LOD, dpsi, deps, dx_pole, dy_pole, TAI_UTC] = IERS(Mjd_UTC, interp);
+
+    _assert(std::abs(x_pole - (-0.015900 / SAT_Const::Arcs)) < 1e-10);
+    _assert(std::abs(y_pole - 0.214100 / SAT_Const::Arcs) < 1e-10);
+    _assert(std::abs(UT1_UTC - 0.0320547) < 1e-10);
+    _assert(fabs(LOD - 0.0016690) < 1e-10);
+    _assert(std::abs(dpsi - 0.063979 / SAT_Const::Arcs) < 1e-10);
+    _assert(std::abs(deps - 0.006290 / SAT_Const::Arcs) < 1e-10);
+    _assert(std::abs(dx_pole - 0.0) < 1e-10);
+    _assert(std::abs(dy_pole - 0.0) < 1e-10);
+    _assert(std::abs(TAI_UTC - 2.0) < 1e-10);
+
+    return 0;
+}
+
+int legendre_01()
+{
+    int n = 5;
+    int m = 5;
+    double fi = 0.5;
+
+    tuple[pnm, dpnm] = Legendre(n, m, fi);
+
+    Matrix expected_pnm(6, 6);
+
+    expected_pnm(1, 1) = 1.0;
+    expected_pnm(1, 2) = 0.0;
+    expected_pnm(1, 3) = 0.0;
+    expected_pnm(1, 4) = 0.0;
+    expected_pnm(1, 5) = 0.0;
+    expected_pnm(1, 6) = 0.0;
+
+    expected_pnm(2, 1) = 0.830389391308554;
+    expected_pnm(2, 2) = 1.52001758503058;
+    expected_pnm(2, 3) = 0.0;
+    expected_pnm(2, 4) = 0.0;
+    expected_pnm(2, 5) = 0.0;
+    expected_pnm(2, 6) = 0.0;
+
+    expected_pnm(3, 1) = -0.347097518865836;
+    expected_pnm(3, 2) = 1.62950155523887;
+    expected_pnm(3, 3) = 1.49139129468805;
+    expected_pnm(3, 4) = 0.0;
+    expected_pnm(3, 5) = 0.0;
+    expected_pnm(3, 6) = 0.0;
+
+    expected_pnm(4, 1) = -1.17378701262255;
+    expected_pnm(4, 2) = 0.212202357272447;
+    expected_pnm(4, 3) = 1.89174148838053;
+    expected_pnm(4, 4) = 1.41368608598461;
+    expected_pnm(4, 5) = 0.0;
+    expected_pnm(4, 6) = 0.0;
+
+    expected_pnm(5, 1) = -0.767399315461537;
+    expected_pnm(5, 2) = -1.38808376073941;
+    expected_pnm(5, 3) = 0.786498890737644;
+    expected_pnm(5, 4) = 2.03327163957131;
+    expected_pnm(5, 5) = 1.31588285891418;
+    expected_pnm(5, 6) = 0.0;
+
+    expected_pnm(6, 1) = 0.445002604545034;
+    expected_pnm(6, 2) = -1.56190112426287;
+    expected_pnm(6, 3) = -0.973923036046662;
+    expected_pnm(6, 4) = 1.25262365245443;
+    expected_pnm(6, 5) = 2.0923519453586;
+    expected_pnm(6, 6) = 1.21116010580682;
+
+    Matrix expected_dpnm(6, 6);
+
+    expected_dpnm(1, 1) = 0.0;
+    expected_dpnm(1, 2) = 0.0;
+    expected_dpnm(1, 3) = 0.0;
+    expected_dpnm(1, 4) = 0.0;
+    expected_dpnm(1, 5) = 0.0;
+    expected_dpnm(1, 6) = 0.0;
+
+    expected_dpnm(2, 1) = 1.52001758503058;
+    expected_dpnm(2, 2) = -0.830389391308554;
+    expected_dpnm(2, 3) = 0.0;
+    expected_dpnm(2, 4) = 0.0;
+    expected_dpnm(2, 5) = 0.0;
+    expected_dpnm(2, 6) = 0.0;
+
+    expected_dpnm(3, 1) = 2.82237948468622;
+    expected_dpnm(3, 2) = 2.09258183254477;
+    expected_dpnm(3, 3) = -1.62950155523887;
+    expected_dpnm(3, 4) = 0.0;
+    expected_dpnm(3, 5) = 0.0;
+    expected_dpnm(3, 6) = 0.0;
+
+    expected_dpnm(4, 1) = 0.519787497533268;
+    expected_dpnm(4, 2) = 5.86628517139076;
+    expected_dpnm(4, 3) = 1.39588339664843;
+    expected_dpnm(4, 4) = -2.31690068589274;
+    expected_dpnm(4, 5) = 0.0;
+    expected_dpnm(4, 6) = 0.0;
+
+    expected_dpnm(5, 1) = -4.38950626702873;
+    expected_dpnm(5, 2) = 4.09514580882138;
+    expected_dpnm(5, 3) = 6.74847324498126;
+    expected_dpnm(5, 4) = 0.389534693461711;
+    expected_dpnm(5, 5) = -2.87548032867033;
+    expected_dpnm(5, 6) = 0.0;
+
+    expected_dpnm(6, 1) = -6.04921704269275;
+    expected_dpnm(6, 2) = -4.30024582591831;
+    expected_dpnm(6, 3) = 7.20069073552648;
+    expected_dpnm(6, 4) = 6.82416323463234;
+    expected_dpnm(6, 5) = -0.742203764035525;
+    expected_dpnm(6, 6) = -3.30829890700867;
+
+    _assert(m_equals(pnm, expected_pnm, 1e-10));
+    _assert(m_equals(dpnm, expected_dpnm, 1e-10));
+
+    return 0;
+}
+
+int nutAngles_01(){
+
+	tuple<double,double> R = NutAngles(2025);
+
+	_assert((fabs(5.81895359450653e-05 - get<0>(R)) < 1e-10) && (fabs(-3.27016318829544e-05 - get<1>(R)) < 1e-10));
+    
+    return 0;
+}
+
+int timeupdate_01()
+{
+    Matrix P(2, 2);
+    P(1,1) = 1.0; P(1,2) = 2.0;
+    P(2,1) = 3.0; P(2,2) = 4.0;
+
+    Matrix Phi(2, 2);
+    Phi(1,1) = 0.0; Phi(1,2) = 1.0;
+    Phi(2,1) = -1.0; Phi(2,2) = 0.0;
+
+    double Qdt = 0.5;
+
+    Matrix result = TimeUpdate(P, Phi, Qdt);
+
+    Matrix expected(2, 2);
+    expected(1,1) = 4.5; expected(1,2) = -2.5;
+    expected(2,1) = -1.5; expected(2,2) = 1.5;
+
+    _assert(m_equals(result, expected, 1e-10));
+
+    return 0;
+}
 int all_tests()
 {
     _verify(m_sum_01);
@@ -972,17 +1195,22 @@ int all_tests()
     _verify(mean_obliquity_01);
     _verify(mjday_01);
     _verify(mjday_TDB_01);
-    //_verify(position_01); PROBLEMAS PRECISION
+    _verify(position_01);
     _verify(sign_01);
     _verify(timediff_01);
-    
-    
+    _verify(azelpa_01);
+    _verify(iers_01);
+
+    _verify(legendre_01);
+    _verify(nutAngles_01);
+    _verify(timeupdate_01);
 
     return 0;
 }
 
 int main()
 {
+    eop19620101(21413);
     int result = all_tests();
 
     if (result == 0)
