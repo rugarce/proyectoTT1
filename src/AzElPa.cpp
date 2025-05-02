@@ -2,7 +2,7 @@
 #include "../include/SAT_Const.hpp"
 #include <cmath>
 
-tuple<double, double, Matrix, Matrix> AzElPa(Matrix& s)
+tuple<double, double, Matrix&, Matrix&> AzElPa(Matrix& s)
 {
 
     const double rho = std::sqrt(s(1) * s(1) + s(2) * s(2));
@@ -15,15 +15,15 @@ tuple<double, double, Matrix, Matrix> AzElPa(Matrix& s)
 
     double El = std::atan(s(3) / rho);
 
-    Matrix dAds(1, 3);
-    dAds(1, 1) = s(2) / (rho * rho);
-    dAds(1, 2) = -s(1) / (rho * rho);
-    dAds(1, 3) = 0.0;
+    Matrix* dAds = new Matrix(1, 3);
+    (*dAds)(1, 1) = s(2) / (rho * rho);
+    (*dAds)(1, 2) = -s(1) / (rho * rho);
+    (*dAds)(1, 3) = 0.0;
 
-    Matrix dEds(1, 3);
-    dEds(1, 1) = -s(1) * s(3) / rho / dot(s, s);
-    dEds(1, 2) = -s(2) * s(3) / rho / dot(s, s);
-    dEds(1, 3) = rho / dot(s, s);
+    Matrix* dEds = new Matrix(1, 3);
+    (*dEds)(1, 1) = -s(1) * s(3) / rho / dot(s, s);
+    (*dEds)(1, 2) = -s(2) * s(3) / rho / dot(s, s);
+    (*dEds)(1, 3) = rho / dot(s, s);
 
-    return make_tuple(Az, El, dAds, dEds);
+    return tie(Az, El, *dAds, *dEds);
 }

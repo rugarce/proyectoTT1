@@ -19,6 +19,7 @@
 #include "..\include\Legendre.hpp"
 #include "..\include\TimeUpdate.hpp"
 #include "..\include\NutAngles.hpp"
+#include "..\include\AccelHarmonic.hpp"
 #include <iostream>
 #include <cstdio>
 #include <cmath>
@@ -1155,6 +1156,26 @@ int timeupdate_01()
 
     return 0;
 }
+
+int accelHarmonic_01()
+{
+    Matrix r(3);
+    r(1) = 7000e3; r(2) = 0; r(3) = 0;
+
+    Matrix E = eye(3);
+
+    Matrix acc = AccelHarmonic(r, E, 20, 0);
+
+    Matrix expected(3);
+    expected(1) = -8.14569527033552; 
+    expected(2) = 0.0;
+    expected(3) = -1.92606250194258e-05;
+
+    _assert(m_equals(acc, expected, 1e-10));
+
+    return 0;
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -1204,6 +1225,7 @@ int all_tests()
     _verify(legendre_01);
     _verify(nutAngles_01);
     _verify(timeupdate_01);
+    _verify(accelHarmonic_01);
 
     return 0;
 }

@@ -140,5 +140,5 @@ tuple<double, double> NutAngles(double Mjd_TT)
     dpsi = 1.0e-5 * dpsi / SAT_Const::Arcs;
     deps = 1.0e-5 * deps / SAT_Const::Arcs;
 
-    return std::make_tuple(dpsi, deps);
+    return std::tie(dpsi, deps);
 }

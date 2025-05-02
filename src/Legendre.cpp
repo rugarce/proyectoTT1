@@ -5,9 +5,9 @@
 
 using namespace std;
 
-tuple<Matrix, Matrix> Legendre(int n, int m, double fi) {
-    Matrix pnm = zeros(n + 1, m + 1);
-    Matrix dpnm = zeros(n + 1, m + 1);
+tuple<Matrix&, Matrix&> Legendre(int n, int m, double fi) {
+    Matrix& pnm = zeros(n + 1, m + 1);
+    Matrix& dpnm = zeros(n + 1, m + 1);
 
     pnm(1, 1) = 1.0;
     dpnm(1, 1) = 0.0;
@@ -58,5 +58,5 @@ tuple<Matrix, Matrix> Legendre(int n, int m, double fi) {
         if (j > m) break;
     }
 
-    return make_tuple(pnm, dpnm);
+    return tie(pnm, dpnm);
 }

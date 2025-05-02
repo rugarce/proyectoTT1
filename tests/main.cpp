@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
     //eop19620101(); // c=21413
-    cout<< eopdata
+    GGM03S(6);
     Matrix M1(3, 2);
 	M1(1,1) = 5;
 	
@@ -19,7 +19,6 @@ int main() {
 
     Matrix Rx = R_x(30);
 
-    cout << "M1\n" << M1 << "\n";
     cout << "M2\n" << M2 << "\n";
     cout << "M3\n" << M3 << "\n";
     cout << "Rx\n" << Rx << "\n";
