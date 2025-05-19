@@ -1,3 +1,17 @@
+//$Source$
+//------------------------------------------------------------------------------
+// global
+//------------------------------------------------------------------------------
+// Proyecto-TTI.
+//
+//
+/**@file global.cpp
+ * @brief Implementación de la operacion global.
+ *
+ * @author Rubén García Eguizábal
+ * @bug No hay bugs
+ */
+//------------------------------------------------------------------------------
 #include "..\include\global.hpp"
 #include "..\include\SAT_Const.hpp"
 #include "..\include\Mjday.hpp"

@@ -1,3 +1,17 @@
+//$Source$
+//------------------------------------------------------------------------------
+// tests
+//------------------------------------------------------------------------------
+// Proyecto-TTI.
+//
+//
+/**@file tests.cpp
+* @brief Tests de las funciones.
+*
+* @author Rubén García Eguizábal
+* @bug No hay bugs
+*/
+//------------------------------------------------------------------------------
 #include "..\include\matrix.hpp"
 #include "..\include\R_x.hpp"
 #include "..\include\R_y.hpp"

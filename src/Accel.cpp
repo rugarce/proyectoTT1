@@ -6,7 +6,7 @@
 //
 // Created: 2025/05/18
 //
-/**@file Accel.cpp
+/** @file Accel.cpp
  * @brief Implementación de la operación Accel.
  *
  * Calcula la derivada del estado (posición y velocidad) en el marco inercial 

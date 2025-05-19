@@ -1,3 +1,17 @@
+//$Source$
+//------------------------------------------------------------------------------
+// EKF_GEOS3
+//------------------------------------------------------------------------------
+// Proyecto-TTI.
+//
+//
+/**@file EKF_GEOS3.cpp
+* @brief Determinación de la órbita inicial mediante los métodos de Gauss y del filtro de Kalman ampliado.
+*
+* @author Rubén García Eguizábal
+* @bug No hay bugs.
+*/
+//------------------------------------------------------------------------------
 #include "..\include\matrix.hpp"
 #include "..\include\global.hpp"
 #include "..\include\R_x.hpp"
