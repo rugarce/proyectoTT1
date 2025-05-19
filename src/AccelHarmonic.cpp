@@ -1,17 +1,32 @@
+//$Source$
+//------------------------------------------------------------------------------
+//                                  AccelHarmonic
+//------------------------------------------------------------------------------
+// Proyecto-TTI.
+//
+// Created: 2025/05/18
+//
+/**@file AccelHarmonic.cpp
+ * @brief Implementación de la operacion AccelHarmonic.
+ *
+ * @author Rubén García Eguizábal
+ * @bug No hay bugs
+ */
+//------------------------------------------------------------------------------
 #include "../include/AccelHarmonic.hpp"
 #include "../include/SAT_Const.hpp"
 #include "../include/Legendre.hpp"
 #include "../include/matrix.hpp"
 #include "../include/global.hpp"
 
-Matrix AccelHarmonic(Matrix &r, Matrix &E, int n_max, int m_max)
+Matrix& AccelHarmonic(Matrix &r, Matrix &E, int n_max, int m_max)
 {
     GGM03S(181);
 
-    const double r_ref = 6378136.3;    
-    const double gm = 398600.4415e9;   
+    double r_ref = 6378136.3;    
+    double gm = 398600.4415e9;   
 
-    Matrix r_bf = transpose(E * transpose(r));
+    Matrix& r_bf = transpose(E * transpose(r));
     double d = norm(r_bf);
     double latgc = asin(r_bf(3) / d);
     double lon = atan2(r_bf(2), r_bf(1));
@@ -50,11 +65,11 @@ Matrix AccelHarmonic(Matrix &r, Matrix &E, int n_max, int m_max)
     double ay = (1/d * dUdr - r_bf(3)/(d*d*sqrt(r2xy)) * dUdlatgc) * r_bf(2) + (1/r2xy * dUdlon) * r_bf(1);
     double az = 1/d * dUdr * r_bf(3) + sqrt(r2xy)/(d*d) * dUdlatgc;
 
-    Matrix a_bf(3, 1);
+    Matrix a_bf = zeros(3);
     a_bf(1) = ax;
     a_bf(2) = ay;
     a_bf(3) = az;
 
-    Matrix a = transpose(E) * a_bf;
-    return a;
+    Matrix& a = transpose(E) * transpose(a_bf);
+    return transpose(a);
 }

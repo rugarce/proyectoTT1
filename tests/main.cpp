@@ -1,29 +1,27 @@
-#include "..\include\matrix.hpp"
-#include "..\include\global.hpp"
-#include "..\include\R_x.hpp"
-#include <iostream>
-#include <cmath>
+// #include "..\include\matrix.hpp"
+// #include "..\include\global.hpp"
+// #include "..\include\R_x.hpp"
+// #include <iostream>
+// #include <cmath>
 
-using namespace std;
+// using namespace std;
 
-int main() {
-    //eop19620101(); // c=21413
-    GGM03S(6);
-    Matrix M1(3, 2);
-	M1(1,1) = 5;
+// int main() {
+//     //eop19620101(); // c=21413
+//     Matrix M1(3, 2);
+// 	M1(1,1) = 5;
 	
-    Matrix M2(3, 2);
-	M2(1,1) = -3;
+//     Matrix M2(3, 2);
+// 	M2(1,1) = -3;
 	
-    Matrix M3 = M1 - M2;
+//     Matrix M3 = M1 - M2;
 
-    Matrix Rx = R_x(30);
+//     Matrix Rx = R_x(30);
 
-    cout << "M2\n" << M2 << "\n";
-    cout << "M3\n" << M3 << "\n";
-    cout << "Rx\n" << Rx << "\n";
+//     cout << "M2\n" << M2 << "\n";
+//     cout << "M3\n" << M3 << "\n";
 	
-	cout << M1(1,1) << "\n";
+// 	cout << M1(1,1) << "\n";
 
-    return 0;
-}
+//     return 0;
+// }

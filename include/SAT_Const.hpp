@@ -1,3 +1,22 @@
+//$Header$
+//------------------------------------------------------------------------------
+//                                   SAT_Const
+//------------------------------------------------------------------------------
+// Proyecto-TTI.
+//
+// Created: 2025/05/18
+//
+/**@file SAT_Const.hpp
+ * @brief Constantes físicas y astronómicas utilizadas en el proyecto.
+ *
+ * Este espacio de nombres contiene constantes matemáticas,
+ * parámetros físicos, y constantes astronómicas estándar,
+ * como radios planetarios, constantes gravitacionales, etc.
+ *
+ * @author Rubén García Eguizábal
+ * @bug No hay bugs conocidos
+ */
+//------------------------------------------------------------------------------
 #ifndef SAT_CONST_HPP
 #define SAT_CONST_HPP
 
@@ -6,7 +25,7 @@ namespace SAT_Const {
     // Mathematical constants
     const double pi = 3.14159265358979;                       
     const double eps = 2.22044604925031e-16;
-    const double pi2       = 6.283185307179586;               // 2π
+    const double pi2 = 6.283185307179586;               // 2π
     const double Rad       = 3.141592653589793 / 180.0;       // Radians per degree
     const double Deg       = 180.0 / 3.141592653589793;       // Degrees per radian
     const double Arcs      = 3600.0 * 180.0 / 3.141592653589793; // Arcseconds per radian

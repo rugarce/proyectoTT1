@@ -1,3 +1,37 @@
+//$Source$
+//------------------------------------------------------------------------------
+//                                Legendre
+//------------------------------------------------------------------------------
+// Proyecto-TTI.
+//
+// Created: 2025/05/18
+//
+/** @file Legendre.cpp
+ *  @brief Implementación de la función que computa los polinomios asociados de Legendre
+ *         normalizados de Schmidt y sus derivadas respecto al ángulo geocéntrico.
+ *
+ *  La función construye recursivamente los polinomios de Legendre asociados (Pnm)
+ *  normalizados según Schmidt hasta el grado `n` y orden `m`, así como sus derivadas
+ *  respecto al ángulo `fi`. Estos valores son fundamentales en la representación
+ *  del potencial gravitacional terrestre en coordenadas esféricas.
+ *
+ *  @param n Grado máximo.
+ *  @param m Orden máximo.
+ *  @param fi Ángulo geocéntrico (latitud geocéntrica) en radianes.
+ *  @return Tupla con dos matrices:
+ *          - pnm: valores de los polinomios Pnm.
+ *          - dpnm: derivadas de Pnm con respecto a fi.
+ *
+ *  @note Se utilizan fórmulas de recurrencia para calcular tanto los valores
+ *        como las derivadas. Las matrices resultantes tienen tamaño (n+1)x(m+1).
+ *
+ *  @warning Se utilizan referencias a matrices creadas dinámicamente; el manejo de memoria
+ *           deberá cuidarse para evitar fugas.
+ *
+ *  @author Rubén García Eguizábal
+ *  @bug No hay bugs conocidos
+ */
+//------------------------------------------------------------------------------
 #include "../include/matrix.hpp"
 #include "../include/Legendre.hpp"
 #include <cmath> 

@@ -1,3 +1,19 @@
+//$Source$
+//------------------------------------------------------------------------------
+//                                  matrix
+//------------------------------------------------------------------------------
+// Proyecto-TTI.
+//
+// Created: 2025/05/18
+//
+/**@file matrix.cpp
+* @brief Implementación de las operaciones de matrices.
+*
+ * @author Rubén García Eguizábal
+ * @bug No hay bugs
+*/
+//------------------------------------------------------------------------------
+
 #include "..\include\matrix.hpp"
 
 Matrix::Matrix(){
@@ -264,7 +280,7 @@ Matrix &transpose(Matrix &m)
     return *m_aux;
 }
 
-Matrix inv(Matrix &m)
+Matrix& inv(Matrix &m)
 {
     if (m.n_row != m.n_column)
     {
@@ -283,7 +299,7 @@ Matrix inv(Matrix &m)
     }
 
     // Crear la matriz identidad
-    Matrix I = eye(m.n_row);
+    Matrix& I = eye(m.n_row);
 
     // Gauss-Jordan
     for (int i = 1; i <= m.n_row; i++)

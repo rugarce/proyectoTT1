@@ -1,9 +1,24 @@
+//$Source$
+//------------------------------------------------------------------------------
+//                                     R_x
+//------------------------------------------------------------------------------
+// Proyecto-TTI.
+//
+// Created: 2025/05/18
+//
+/**@file R_x.cpp
+ * @brief Implementación de la matriz de rotación alrededor del eje X.
+ *
+ * @author Rubén García Eguizábal
+ * @bug No hay bugs
+ */
+//------------------------------------------------------------------------------
 #include "../include/R_x.hpp"
 
-Matrix R_x(double angle){
+Matrix& R_x(double angle){
     double C = cos(angle);
     double S = sin(angle);
-    Matrix rotmat = zeros(3,3);
+    Matrix& rotmat = zeros(3,3);
 
     rotmat(1,1) = 1.0;  rotmat(1,2) =    0.0;  rotmat(1,3) = 0.0;
     rotmat(2,1) = 0.0;  rotmat(2,2) =      C;  rotmat(2,3) =   S;

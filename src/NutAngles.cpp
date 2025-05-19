@@ -1,3 +1,18 @@
+//$Source$
+//------------------------------------------------------------------------------
+//                                  NutAngles
+//------------------------------------------------------------------------------
+// Proyecto-TTI.
+//
+// Created: 2025/05/18
+//
+/**@file NutAngles.cpp
+ * @brief Implementación de la operacion NutAngles.
+ *
+ * @author Rubén García Eguizábal
+ * @bug No hay bugs
+ */
+//------------------------------------------------------------------------------
 #include "..\include\NutAngles.hpp"
 #include "..\include\SAT_Const.hpp"
 using namespace std;

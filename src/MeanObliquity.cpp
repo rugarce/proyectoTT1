@@ -1,3 +1,20 @@
+//$Source$
+//------------------------------------------------------------------------------
+//                               MeanObliquity
+//------------------------------------------------------------------------------
+// Proyecto-TTI.
+//
+// Created: 2025/05/18
+//
+/**@file MeanObliquity.cpp
+ * @brief Implementación de la función para calcular la oblicuidad media de la eclíptica.
+ *
+ * Se calcula usando una expresión polinómica en T (siglos julianos desde J2000).
+ *
+ * @author Rubén García Eguizábal
+ * @bug No hay bugs
+ */
+//------------------------------------------------------------------------------
 #include "../include/MeanObliquity.hpp"
 #include "../include/SAT_Const.hpp"
 

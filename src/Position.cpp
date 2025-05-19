@@ -1,9 +1,24 @@
+//$Source$
+//------------------------------------------------------------------------------
+//                                  Position
+//------------------------------------------------------------------------------
+// Proyecto-TTI.
+//
+// Created: 2025/05/18
+//
+/**@file Position.cpp
+ * @brief Implementación de la función para calcular la posición geocéntrica en coordenadas cartesianas.
+ *
+ * @author Rubén García Eguizábal
+ * @bug No hay bugs
+ */
+//------------------------------------------------------------------------------
 #include "../include/Position.hpp"
 #include "../include/matrix.hpp"
 #include "../include/SAT_Const.hpp"
 #include <cmath>
 
-Matrix Position(double lon, double lat, double h) {
+Matrix& Position(double lon, double lat, double h) {
     double R_equ = SAT_Const::R_Earth;  
     double f = SAT_Const::f_Earth;      
     double e2 = f * (2.0 - f);  
@@ -12,7 +27,7 @@ Matrix Position(double lon, double lat, double h) {
 
     double N = R_equ / sqrt(1.0 - e2 * SinLat * SinLat);
 
-    Matrix r(3); 
+    Matrix& r = zeros(3); 
 
     r(1) = (N + h) * CosLat * cos(lon);  
     r(2) = (N + h) * CosLat * sin(lon); 

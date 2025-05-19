@@ -1,11 +1,40 @@
+//$Source$
+//------------------------------------------------------------------------------
+//                                  IERS
+//------------------------------------------------------------------------------
+// Proyecto-TTI.
+//
+// Created: 2025/05/18
+//
+/** @file IERS.cpp
+ *  @brief Implementación de la función IERS que extrae/interpola parámetros de orientación de la Tierra.
+ *
+ *  A partir de una fecha UTC (MJD), busca la fila correspondiente en la tabla `eopdata`.
+ *  Si se indica interpolación lineal ("l"), interpola entre la fila actual y la siguiente.
+ *  En caso contrario ("n"), toma los valores directamente de la fila correspondiente.
+ *  Devuelve los valores convertidos a radianes donde corresponde.
+ *
+ *  @note Utiliza la constante SAT_Const::Arcs para convertir de arcosegundos a radianes.
+ *  @note La variable `eopdata` debe estar definida externamente como una matriz global.
+ *
+ *  @param Mjd_UTC Tiempo UTC en formato Modified Julian Date.
+ *  @param interp Opción de interpolación: "l" para lineal, "n" para sin interpolación.
+ *  @return Tupla con: x_pole, y_pole, UT1_UTC, LOD, dpsi, deps, dx_pole, dy_pole, TAI_UTC.
+ *
+ *  @throws Finaliza la ejecución si no se encuentra una fila correspondiente o si la interpolación falla.
+ *
+ *  @author Rubén García Eguizábal
+ *  @bug No hay bugs conocidos
+ */
+//------------------------------------------------------------------------------
 #include "../include/IERS.hpp"
 #include "../include/SAT_Const.hpp"
-#include <cmath>
-#include <stdexcept>
+
+using namespace std;
 
 extern Matrix eopdata; 
 
-tuple<double, double, double, double, double, double, double, double, double> IERS(double Mjd_UTC,const string& interp) {
+tuple<double, double, double, double, double, double, double, double, double> IERS(double Mjd_UTC,string interp) {
 
     double x_pole, y_pole, UT1_UTC, LOD, dpsi, deps, dx_pole, dy_pole, TAI_UTC;
     double mjd = floor(Mjd_UTC);

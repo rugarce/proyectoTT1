@@ -1,3 +1,21 @@
+//$Source$
+//------------------------------------------------------------------------------
+//                                  EccAnom
+//------------------------------------------------------------------------------
+// Proyecto-TTI.
+//
+// Created: 2025/05/18
+//
+/**@file EccAnom.cpp
+ * @brief Implementación del cálculo de la anomalía excéntrica.
+ *
+ * Utiliza el método de Newton-Raphson para resolver iterativamente la ecuación de Kepler
+ * y determinar la anomalía excéntrica E a partir de la anomalía media M y la excentricidad e.
+ *
+ * @author Rubén García Eguizábal
+ * @bug No hay bugs
+ */
+//------------------------------------------------------------------------------
 #include "../include/EccAnom.hpp"
 #include "../include/SAT_Const.hpp"
 #include <cmath>

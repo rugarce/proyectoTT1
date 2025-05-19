@@ -1,3 +1,18 @@
+//$Source$
+//------------------------------------------------------------------------------
+//                                  Mjday_TDB
+//------------------------------------------------------------------------------
+// Proyecto-TTI.
+//
+// Created: 2025/05/18
+//
+/**@file Mjday_TDB.cpp
+ * @brief Implementación de la función para calcular el día juliano modificado en tiempo dinámico (TDB) desde el tiempo terrestre (TT).
+ *
+ * @author Rubén García Eguizábal
+ * @bug No hay bugs
+ */
+//------------------------------------------------------------------------------
 #include "../include/Mjday_TDB.hpp"
 #include <cmath>
 
