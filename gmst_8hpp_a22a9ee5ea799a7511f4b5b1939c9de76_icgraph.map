@@ -1,0 +1,12 @@
+<map id="gmst" name="gmst">
+<area shape="rect" id="Node000001" title="Calcula el tiempo sideral medio de Greenwich (GMST)." alt="" coords="344,31,395,56"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="385,17,379,11,369,9,360,11,355,15,354,22,357,29,352,31,349,22,351,13,358,6,370,4,382,7,389,14"/>
+<area shape="rect" id="Node000002" href="$gast_8cpp.html#a4eb2d09c87615520077aec1005b8e0ad" title="Calcula el Tiempo Sideral Aparente de Greenwich (GAST)." alt="" coords="250,31,296,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="329,46,297,46,297,41,329,41"/>
+<area shape="rect" id="Node000003" href="$GHAMatrix_8cpp.html#a49218ae38846c1175342d13a65d41f4d" title="Genera la matriz de rotación correspondiente a la Hora Angular de Greenwich." alt="" coords="117,31,202,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="234,46,202,46,202,41,234,41"/>
+<area shape="rect" id="Node000004" href="$Accel_8cpp.html#a28040ec3672b4e1805218ad1cd43bfa0" title="Calcula la derivada del estado orbital (posición y velocidad)." alt="" coords="10,5,64,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="101,34,64,26,65,21,102,29"/>
+<area shape="rect" id="Node000005" href="$VarEqn_8cpp.html#a6e153d0ae05034cb5b346189ebb847d3" title="Evalúa las derivadas del estado y la matriz de transición." alt="" coords="5,55,69,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="102,57,70,64,69,59,101,52"/>
+</map>

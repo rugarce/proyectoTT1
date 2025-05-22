@@ -1,0 +1,14 @@
+<map id="GHAMatrix" name="GHAMatrix">
+<area shape="rect" id="Node000001" title="Genera la matriz de rotación correspondiente a la Hora Angular de Greenwich." alt="" coords="5,55,91,80"/>
+<area shape="rect" id="Node000002" href="$gast_8cpp.html#a4eb2d09c87615520077aec1005b8e0ad" title="Calcula el Tiempo Sideral Aparente de Greenwich (GAST)." alt="" coords="139,29,185,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,55,123,48,124,53,91,61"/>
+<area shape="rect" id="Node000005" href="$R__z_8cpp.html#a4f688959a9ab144bf27d272e54bf7258" title="Construye una matriz de rotación 3x3 para rotar un vector alrededor del eje Z." alt="" coords="140,79,184,104"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="91,74,126,81,124,86,90,79"/>
+<area shape="rect" id="Node000003" href="$gmst_8cpp.html#a22a9ee5ea799a7511f4b5b1939c9de76" title="Calcula el tiempo sideral medio de Greenwich (GMST)." alt="" coords="234,29,284,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="186,40,218,40,218,45,186,45"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="241,30,238,21,240,12,247,5,259,3,272,5,278,12,274,16,269,10,259,8,250,10,245,14,244,20,246,28"/>
+<area shape="rect" id="Node000004" href="$Frac_8cpp.html#a92f2f0f91c99cd6bec1a0e9a3b6443fc" title="Calcula la parte fraccional de un número real." alt="" coords="333,29,381,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="285,40,318,40,318,45,285,45"/>
+<area shape="rect" id="Node000006" href="$matrix_8cpp.html#a56d60ea1f08402246a7cfd477d69a618" title="Crea una matriz de ceros." alt="" coords="233,79,285,104"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="184,89,217,89,217,94,184,94"/>
+</map>

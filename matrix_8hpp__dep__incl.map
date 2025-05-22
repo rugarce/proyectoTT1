@@ -1,0 +1,147 @@
+<map id="/github/workspace/include/matrix.hpp" name="/github/workspace/include/matrix.hpp">
+<area shape="rect" id="Node000001" title="Cabecera de las operaciones de las matrices." alt="" coords="2644,5,2817,46"/>
+<area shape="rect" id="Node000002" href="$Accel_8hpp.html" title="Cabecera de la operación Accel." alt="" coords="1599,183,1772,223"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2629,33,2363,52,2202,71,2043,97,1959,116,1876,140,1739,185,1738,180,1874,134,1958,111,2042,91,2202,65,2362,47,2629,28"/>
+<area shape="rect" id="Node000005" href="$AccelHarmonic_8hpp.html" title="Cabecera de la operacion AccelHarmonic." alt="" coords="1086,94,1258,135"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="2629,29,2388,31,2050,40,1663,60,1464,76,1270,97,1259,98,1258,93,1269,91,1464,71,1662,55,2050,35,2387,26,2629,24"/>
+<area shape="rect" id="Node000006" href="$AccelHarmonic_8cpp.html" title="Implementación de la operacion AccelHarmonic." alt="" coords="725,183,875,223"/>
+<area shape="poly" id="edge92_Node000001_Node000006" title=" " alt="" coords="2630,30,2195,33,1610,42,1326,51,1083,62,908,77,854,86,827,96,812,115,804,137,801,182,796,182,799,136,808,112,824,92,852,81,907,72,1083,57,1326,45,1610,37,2195,27,2629,25"/>
+<area shape="rect" id="Node000009" href="$AccelPointMass_8hpp.html" title="Cabecera de la función que calcula la aceleración gravitatoria generada por un cuerpo puntual." alt="" coords="106,94,278,135"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="2629,29,2259,31,1700,40,1038,60,696,76,360,97,279,104,278,99,360,91,696,71,1038,55,1700,35,2259,26,2629,24"/>
+<area shape="rect" id="Node000011" href="$AzElPa_8hpp.html" title="Declaración de la función AzElPa para calcular azimut, elevación y sus derivadas." alt="" coords="3263,94,3436,135"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="2833,38,3223,91,3263,97,3262,103,3222,97,2832,43"/>
+<area shape="rect" id="Node000013" href="$Cheb3D_8hpp.html" title="Cabecera de la función de interpolación con polinomios de Chebyshev en 3D." alt="" coords="2194,94,2366,135"/>
+<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="2630,49,2378,97,2367,99,2366,93,2377,91,2629,43"/>
+<area shape="rect" id="Node000016" href="$DEInteg_8hpp.html" title="Cabecera de la operación DEInteg." alt="" coords="3487,94,3660,135"/>
+<area shape="poly" id="edge18_Node000001_Node000016" title=" " alt="" coords="2832,32,3110,56,3448,91,3487,97,3486,102,3448,97,3110,61,2832,37"/>
+<area shape="rect" id="Node000018" href="$EccAnom_8hpp.html" title="Cabecera para el cálculo de la anomalía excéntrica a partir de la media." alt="" coords="2390,94,2562,135"/>
+<area shape="poly" id="edge21_Node000001_Node000018" title=" " alt="" coords="2660,54,2535,96,2533,91,2658,49"/>
+<area shape="rect" id="Node000020" href="$GHAMatrix_8hpp.html" title="Cabecera de la operación GHAMatrix." alt="" coords="1403,183,1576,223"/>
+<area shape="poly" id="edge24_Node000001_Node000020" title=" " alt="" coords="2629,31,2482,37,2294,48,2087,67,1879,97,1787,116,1696,139,1547,185,1546,180,1695,134,1786,111,1878,91,2086,62,2294,43,2482,31,2629,26"/>
+<area shape="rect" id="Node000022" href="$G__AccelHarmonic_8hpp.html" title="Cabecera de la operación G_AccelHarmonic." alt="" coords="1282,94,1454,135"/>
+<area shape="poly" id="edge28_Node000001_Node000022" title=" " alt="" coords="2629,33,2157,55,1848,74,1536,97,1455,105,1454,100,1536,91,1848,68,2157,50,2629,28"/>
+<area shape="rect" id="Node000023" href="$JPL__Eph__DE430_8hpp.html" title="Cabecera de la operacion JPL_Eph_DE430." alt="" coords="230,183,402,223"/>
+<area shape="poly" id="edge31_Node000001_Node000023" title=" " alt="" coords="2629,30,2157,34,1500,44,1171,52,880,64,654,78,575,87,522,97,471,114,422,138,344,185,342,180,419,133,469,109,521,91,574,82,654,73,880,59,1171,47,1500,39,2157,28,2629,25"/>
+<area shape="rect" id="Node000024" href="$LTC_8hpp.html" title="Cabecera para la transformación de coordenadas desde el sistema geodésico local." alt="" coords="4624,183,4797,223"/>
+<area shape="poly" id="edge33_Node000001_Node000024" title=" " alt="" coords="2832,26,3146,33,3566,45,3984,64,4157,77,4288,91,4389,110,4489,133,4651,179,4649,185,4487,138,4388,115,4288,97,4156,82,3983,70,3566,50,3146,38,2832,31"/>
+<area shape="rect" id="Node000026" href="$Legendre_8hpp.html" title="Declaración de la función que calcula los polinomios de Legendre asociados y sus derivadas respecto a..." alt="" coords="838,94,1010,135"/>
+<area shape="poly" id="edge36_Node000001_Node000026" title=" " alt="" coords="2629,29,2352,30,1956,37,1497,58,1261,75,1030,97,1011,99,1010,94,1029,91,1260,69,1497,53,1956,32,2352,24,2629,23"/>
+<area shape="rect" id="Node000027" href="$Legendre_8cpp.html" title="Implementación de la función que computa los polinomios asociados de Legendre normalizados de Schmidt..." alt="" coords="899,183,1048,223"/>
+<area shape="poly" id="edge93_Node000001_Node000027" title=" " alt="" coords="2629,29,2263,30,1777,38,1538,47,1328,59,1167,75,1111,85,1075,96,1056,110,1033,133,990,184,986,181,1029,129,1053,106,1072,92,1110,80,1166,70,1328,53,1538,41,1777,33,2263,25,2629,24"/>
+<area shape="rect" id="Node000028" href="$MeasUpdate_8hpp.html" title="Cabecera de la operación MeasUpdate." alt="" coords="3711,94,3884,135"/>
+<area shape="poly" id="edge39_Node000001_Node000028" title=" " alt="" coords="2832,29,3203,51,3437,68,3672,91,3711,96,3710,102,3672,97,3436,74,3203,56,2832,34"/>
+<area shape="rect" id="Node000030" href="$NutAngles_8hpp.html" title="Cabecera de la operacion NutAngles." alt="" coords="4232,183,4405,223"/>
+<area shape="poly" id="edge42_Node000001_Node000030" title=" " alt="" coords="2833,26,3147,34,3553,47,3925,66,4060,78,4139,91,4185,110,4229,133,4296,180,4293,184,4226,138,4183,114,4138,97,4059,83,3925,72,3552,52,3147,39,2832,32"/>
+<area shape="rect" id="Node000033" href="$NutMatrix_8hpp.html" title="Cabecera para la generación de la matriz de nutación." alt="" coords="2523,183,2696,223"/>
+<area shape="poly" id="edge45_Node000001_Node000033" title=" " alt="" coords="2711,60,2625,184,2621,181,2707,57"/>
+<area shape="rect" id="Node000034" href="$PoleMatrix_8hpp.html" title="Cabecera para la generación de la matriz de corrección por movimiento del polo." alt="" coords="1795,183,1968,223"/>
+<area shape="poly" id="edge49_Node000001_Node000034" title=" " alt="" coords="2629,35,2421,55,2301,73,2182,97,2111,116,2041,140,1927,185,1925,180,2040,135,2110,111,2181,91,2300,67,2421,50,2629,30"/>
+<area shape="rect" id="Node000036" href="$Position_8hpp.html" title="Cabecera de la función para calcular la posición geocéntrica en coordenadas cartesianas." alt="" coords="2951,94,3124,135"/>
+<area shape="poly" id="edge53_Node000001_Node000036" title=" " alt="" coords="2816,48,2968,91,2967,96,2814,53"/>
+<area shape="rect" id="Node000037" href="$Position_8cpp.html" title="Implementación de la función para calcular la posición geocéntrica en coordenadas cartesianas." alt="" coords="3163,183,3312,223"/>
+<area shape="poly" id="edge94_Node000001_Node000037" title=" " alt="" coords="2832,34,3004,56,3082,72,3137,92,3166,111,3191,135,3227,180,3223,184,3187,138,3162,115,3135,96,3081,78,3003,62,2832,39"/>
+<area shape="rect" id="Node000038" href="$PrecMatrix_8hpp.html" title="Cabecera de la operación PrecMatrix." alt="" coords="2719,183,2892,223"/>
+<area shape="poly" id="edge57_Node000001_Node000038" title=" " alt="" coords="2747,59,2799,181,2795,183,2743,62"/>
+<area shape="rect" id="Node000040" href="$R__x_8hpp.html" title="Cabecera para la matriz de rotación alrededor del eje X." alt="" coords="5016,183,5189,223"/>
+<area shape="poly" id="edge61_Node000001_Node000040" title=" " alt="" coords="2832,26,3680,47,4171,66,4376,78,4531,91,4666,110,4800,133,5020,179,5019,185,4799,138,4665,115,4530,97,4375,83,4171,72,3680,52,2832,31"/>
+<area shape="rect" id="Node000042" href="$R__y_8hpp.html" title="Cabecera para la matriz de rotación alrededor del eje Y." alt="" coords="4820,183,4993,223"/>
+<area shape="poly" id="edge65_Node000001_Node000042" title=" " alt="" coords="2833,26,3620,47,4070,66,4258,78,4400,91,4520,110,4639,133,4834,179,4833,185,4638,138,4519,115,4400,97,4258,83,4070,71,3619,52,2833,31"/>
+<area shape="rect" id="Node000044" href="$R__z_8hpp.html" title="Cabecera para la matriz de rotación alrededor del eje Z." alt="" coords="4428,183,4601,223"/>
+<area shape="poly" id="edge70_Node000001_Node000044" title=" " alt="" coords="2832,25,3130,30,3525,41,3915,60,4077,74,4199,91,4276,110,4350,133,4471,180,4469,185,4348,138,4274,115,4198,97,4076,80,3915,66,3525,46,3130,35,2832,31"/>
+<area shape="rect" id="Node000046" href="$TimeUpdate_8hpp.html" title="Prototipo de la función que actualiza la matriz de covarianza en el paso temporal de un filtro de Kal..." alt="" coords="3923,94,4096,135"/>
+<area shape="poly" id="edge77_Node000001_Node000046" title=" " alt="" coords="2833,26,3294,44,3593,63,3896,91,3923,95,3922,100,3896,97,3593,69,3293,50,2832,32"/>
+<area shape="rect" id="Node000047" href="$TimeUpdate_8cpp.html" title="Implementación de la función TimeUpdate." alt="" coords="4059,183,4208,223"/>
+<area shape="poly" id="edge95_Node000001_Node000047" title=" " alt="" coords="2833,26,3156,33,3569,45,3932,65,4052,77,4090,84,4110,92,4126,112,4134,136,4138,182,4132,182,4129,137,4121,115,4106,96,4088,89,4052,82,3932,70,3568,51,3156,38,2833,31"/>
+<area shape="rect" id="Node000048" href="$VarEqn_8hpp.html" title="Cabecera de la operación VarEqn." alt="" coords="2915,183,3088,223"/>
+<area shape="poly" id="edge80_Node000001_Node000048" title=" " alt="" coords="2775,52,2973,180,2970,184,2772,57"/>
+<area shape="rect" id="Node000049" href="$global_8hpp.html" title="Archivo cabecera de operacion global." alt="" coords="534,94,706,135"/>
+<area shape="poly" id="edge83_Node000001_Node000049" title=" " alt="" coords="2629,30,2318,34,1861,44,1327,64,1052,79,782,97,707,104,706,99,781,91,1051,73,1327,59,1861,39,2318,29,2629,25"/>
+<area shape="rect" id="Node000003" href="$Accel_8cpp.html" title="Implementación de la operación Accel." alt="" coords="1127,271,1276,312"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1584,227,1277,280,1276,275,1583,221"/>
+<area shape="rect" id="Node000004" href="$EKF__GEOS3_8cpp.html" title="Determinación de la órbita inicial mediante los métodos de Gauss y del filtro de Kalman ampliado." alt="" coords="3381,271,3542,312"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="1787,221,1941,234,2139,246,2604,265,3381,286,3381,291,2604,271,2139,251,1941,239,1786,226"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="1142,148,1129,165,1120,184,1116,203,1120,222,1139,249,1165,269,1162,273,1136,252,1115,224,1110,203,1115,182,1125,162,1138,144"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="1073,141,876,187,874,182,1072,136"/>
+<area shape="rect" id="Node000007" href="$G__AccelHarmonic_8cpp.html" title="Implementación de la operación G_AccelHarmonic." alt="" coords="1173,183,1328,223"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="1202,145,1235,180,1231,184,1198,148"/>
+<area shape="rect" id="Node000008" href="$VarEqn_8cpp.html" title="Implementación de la operación VarEqn." alt="" coords="1415,271,1564,312"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="1160,150,1153,187,1155,206,1163,222,1179,234,1203,246,1267,264,1343,276,1414,283,1414,288,1342,281,1266,269,1201,251,1176,239,1159,225,1150,207,1147,187,1155,149"/>
+<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="193,150,199,188,207,206,219,221,237,231,268,240,358,256,478,267,616,276,902,285,1126,288,1126,293,902,290,615,281,477,273,357,261,267,246,235,236,216,225,202,209,194,190,188,151"/>
+<area shape="rect" id="Node000010" href="$AccelPointMass_8cpp.html" title="Implementación de la función que calcula la aceleración gravitatoria generada por un cuerpo puntual." alt="" coords="5,183,155,223"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="156,146,107,184,104,180,153,142"/>
+<area shape="poly" id="edge14_Node000011_Node000004" title=" " alt="" coords="3354,149,3361,186,3377,222,3400,248,3427,269,3424,273,3396,252,3372,225,3356,188,3349,151"/>
+<area shape="rect" id="Node000012" href="$AzElPa_8cpp.html" title="Implementación de la función AzElPa." alt="" coords="3387,183,3536,223"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="3388,142,3438,180,3434,184,3385,146"/>
+<area shape="rect" id="Node000014" href="$Cheb3D_8cpp.html" title="Implementación de la función de interpolación con polinomios de Chebyshev en 3D." alt="" coords="1992,183,2141,223"/>
+<area shape="poly" id="edge16_Node000013_Node000014" title=" " alt="" coords="2219,143,2116,185,2114,180,2217,138"/>
+<area shape="rect" id="Node000015" href="$tests_8cpp.html" title="Tests de las funciones." alt="" coords="2338,183,2499,223"/>
+<area shape="poly" id="edge17_Node000013_Node000015" title=" " alt="" coords="2326,141,2389,180,2386,184,2323,145"/>
+<area shape="poly" id="edge20_Node000016_Node000004" title=" " alt="" coords="3574,151,3566,188,3550,225,3526,252,3499,273,3495,269,3523,248,3546,222,3561,186,3569,149"/>
+<area shape="rect" id="Node000017" href="$DEInteg_8cpp.html" title="Implementación de la operación DEInteg." alt="" coords="3611,183,3760,223"/>
+<area shape="poly" id="edge19_Node000016_Node000017" title=" " alt="" coords="3612,142,3662,180,3658,184,3609,146"/>
+<area shape="poly" id="edge23_Node000018_Node000015" title=" " alt="" coords="2457,149,2434,184,2429,181,2452,146"/>
+<area shape="rect" id="Node000019" href="$EccAnom_8cpp.html" title="Implementación del cálculo de la anomalía excéntrica." alt="" coords="2165,183,2315,223"/>
+<area shape="poly" id="edge22_Node000018_Node000019" title=" " alt="" coords="2409,143,2295,185,2293,180,2408,138"/>
+<area shape="poly" id="edge25_Node000020_Node000003" title=" " alt="" coords="1410,231,1268,273,1266,268,1409,226"/>
+<area shape="poly" id="edge27_Node000020_Node000008" title=" " alt="" coords="1492,239,1492,271,1487,271,1487,239"/>
+<area shape="rect" id="Node000021" href="$GHAMatrix_8cpp.html" title="Implementación de la operación GHAMatrix." alt="" coords="2455,271,2604,312"/>
+<area shape="poly" id="edge26_Node000020_Node000021" title=" " alt="" coords="1591,221,1843,248,2087,267,2455,285,2454,291,2087,273,1842,254,1591,226"/>
+<area shape="poly" id="edge29_Node000022_Node000007" title=" " alt="" coords="1331,146,1279,184,1276,180,1328,142"/>
+<area shape="poly" id="edge30_Node000022_Node000008" title=" " alt="" coords="1371,150,1378,186,1393,222,1418,249,1448,269,1445,273,1415,253,1388,225,1372,188,1366,151"/>
+<area shape="poly" id="edge32_Node000023_Node000003" title=" " alt="" coords="418,220,422,221,621,244,818,262,1127,284,1126,289,818,267,620,249,421,226,417,225"/>
+<area shape="poly" id="edge35_Node000024_Node000004" title=" " alt="" coords="4609,226,4376,246,4072,265,3542,290,3542,284,4072,259,4376,241,4609,221"/>
+<area shape="rect" id="Node000025" href="$LTC_8cpp.html" title="Implementación de la transformación desde el sistema local tangente." alt="" coords="4659,271,4808,312"/>
+<area shape="poly" id="edge34_Node000024_Node000025" title=" " alt="" coords="4722,238,4731,270,4726,272,4717,239"/>
+<area shape="poly" id="edge37_Node000026_Node000006" title=" " alt="" coords="885,146,830,184,827,180,882,142"/>
+<area shape="poly" id="edge38_Node000026_Node000027" title=" " alt="" coords="945,147,964,181,960,184,940,150"/>
+<area shape="poly" id="edge41_Node000028_Node000004" title=" " alt="" coords="3801,151,3794,189,3786,209,3774,225,3758,237,3735,247,3676,264,3608,277,3542,285,3541,280,3607,271,3675,259,3733,242,3755,232,3770,221,3782,206,3789,188,3796,150"/>
+<area shape="rect" id="Node000029" href="$MeasUpdate_8cpp.html" title="Implementación de la operación MeasUpdate." alt="" coords="3835,183,3984,223"/>
+<area shape="poly" id="edge40_Node000028_Node000029" title=" " alt="" coords="3836,142,3886,180,3882,184,3833,146"/>
+<area shape="rect" id="Node000031" href="$EqnEquinox_8cpp.html" title="Implementación de la operacion EqnEquinox." alt="" coords="3965,271,4115,312"/>
+<area shape="poly" id="edge43_Node000030_Node000031" title=" " alt="" coords="4242,231,4104,273,4103,268,4240,226"/>
+<area shape="rect" id="Node000032" href="$NutMatrix_8cpp.html" title="Implementación de la matriz de transformación por nutación." alt="" coords="4139,271,4288,312"/>
+<area shape="poly" id="edge44_Node000030_Node000032" title=" " alt="" coords="4285,235,4239,273,4235,269,4281,231"/>
+<area shape="poly" id="edge46_Node000033_Node000003" title=" " alt="" coords="2508,226,2340,243,2197,253,1954,259,1712,260,1570,265,1403,274,1277,285,1276,280,1402,269,1570,259,1712,255,1954,253,2197,247,2340,238,2508,221"/>
+<area shape="poly" id="edge48_Node000033_Node000008" title=" " alt="" coords="2508,226,2232,255,1964,274,1732,286,1565,291,1565,286,1732,280,1963,269,2232,250,2508,221"/>
+<area shape="poly" id="edge47_Node000033_Node000032" title=" " alt="" coords="2711,221,2926,240,3109,247,3270,246,3420,242,3570,238,3731,238,3913,247,4127,269,4139,270,4138,276,4126,274,3913,252,3731,243,3571,243,3420,247,3270,251,3109,252,2926,245,2710,226"/>
+<area shape="poly" id="edge50_Node000034_Node000003" title=" " alt="" coords="1781,226,1499,263,1277,286,1276,281,1498,258,1780,221"/>
+<area shape="poly" id="edge52_Node000034_Node000008" title=" " alt="" coords="1780,229,1565,276,1564,271,1779,224"/>
+<area shape="rect" id="Node000035" href="$PoleMatrix_8cpp.html" title="Implementación de la matriz de transformación por movimiento polar." alt="" coords="4832,271,4981,312"/>
+<area shape="poly" id="edge51_Node000034_Node000035" title=" " alt="" coords="1983,221,2115,231,2266,238,2613,245,3002,245,3412,241,3820,238,4206,239,4546,248,4693,257,4820,269,4832,270,4831,276,4820,274,4693,262,4546,254,4206,245,3820,244,3412,247,3002,250,2613,250,2266,243,2115,236,1983,226"/>
+<area shape="poly" id="edge55_Node000036_Node000004" title=" " alt="" coords="3067,144,3113,189,3152,221,3209,246,3269,263,3328,275,3381,282,3380,288,3327,280,3268,268,3207,251,3149,226,3109,193,3064,148"/>
+<area shape="poly" id="edge56_Node000036_Node000015" title=" " alt="" coords="2936,129,2739,152,2511,185,2500,187,2499,182,2510,180,2738,147,2935,124"/>
+<area shape="poly" id="edge54_Node000036_Node000037" title=" " alt="" coords="3098,139,3193,180,3191,185,3096,144"/>
+<area shape="poly" id="edge58_Node000038_Node000003" title=" " alt="" coords="2704,226,2507,246,2339,256,2191,260,2053,260,1767,260,1600,264,1403,274,1277,285,1276,280,1402,269,1600,258,1767,255,2053,255,2191,255,2339,251,2506,240,2704,221"/>
+<area shape="poly" id="edge60_Node000038_Node000008" title=" " alt="" coords="2704,226,2537,244,2368,259,2041,279,1761,289,1565,292,1564,287,1761,283,2041,273,2368,254,2537,239,2704,221"/>
+<area shape="rect" id="Node000039" href="$PrecMatrix_8cpp.html" title="Implementación de la operación PrecMatrix." alt="" coords="4485,271,4635,312"/>
+<area shape="poly" id="edge59_Node000038_Node000039" title=" " alt="" coords="2907,221,3145,241,3347,248,3525,247,3692,241,3858,236,4036,236,4237,245,4474,269,4485,270,4485,276,4473,274,4237,251,4036,241,3858,241,3692,247,3525,252,3347,254,3144,247,2906,226"/>
+<area shape="poly" id="edge62_Node000040_Node000032" title=" " alt="" coords="5002,226,4895,238,4804,244,4649,249,4495,254,4406,261,4300,274,4289,276,4288,271,4300,269,4405,256,4495,248,4649,243,4804,239,4894,233,5001,221"/>
+<area shape="poly" id="edge63_Node000040_Node000035" title=" " alt="" coords="5046,232,4952,273,4950,268,5043,227"/>
+<area shape="rect" id="Node000041" href="$R__x_8cpp.html" title="Implementación de la matriz de rotación alrededor del eje X." alt="" coords="5179,271,5328,312"/>
+<area shape="poly" id="edge64_Node000040_Node000041" title=" " alt="" coords="5151,229,5221,269,5218,273,5148,233"/>
+<area shape="poly" id="edge66_Node000042_Node000025" title=" " alt="" coords="4855,233,4774,273,4771,269,4853,228"/>
+<area shape="poly" id="edge67_Node000042_Node000035" title=" " alt="" coords="4909,239,4909,271,4904,271,4904,239"/>
+<area shape="poly" id="edge68_Node000042_Node000039" title=" " alt="" coords="4814,230,4636,274,4635,269,4812,225"/>
+<area shape="rect" id="Node000043" href="$R__y_8cpp.html" title="Implementación de la matriz de rotación alrededor del eje Y." alt="" coords="5005,271,5155,312"/>
+<area shape="poly" id="edge69_Node000042_Node000043" title=" " alt="" coords="4961,228,5042,269,5040,273,4958,233"/>
+<area shape="poly" id="edge76_Node000044_Node000004" title=" " alt="" coords="4413,226,4161,254,3914,273,3542,291,3541,285,3914,267,4160,248,4413,221"/>
+<area shape="poly" id="edge71_Node000044_Node000021" title=" " alt="" coords="4413,226,4076,245,3541,264,2605,291,2605,286,3540,258,4076,239,4413,221"/>
+<area shape="poly" id="edge72_Node000044_Node000025" title=" " alt="" coords="4579,227,4685,268,4683,273,4577,232"/>
+<area shape="poly" id="edge73_Node000044_Node000032" title=" " alt="" coords="4432,231,4283,273,4281,268,4431,225"/>
+<area shape="poly" id="edge74_Node000044_Node000039" title=" " alt="" coords="4534,236,4552,270,4547,272,4530,239"/>
+<area shape="rect" id="Node000045" href="$R__z_8cpp.html" title="Implementación de la matriz de rotación alrededor del eje Z." alt="" coords="4312,271,4461,312"/>
+<area shape="poly" id="edge75_Node000044_Node000045" title=" " alt="" coords="4475,234,4417,273,4414,269,4472,230"/>
+<area shape="poly" id="edge79_Node000046_Node000004" title=" " alt="" coords="4018,150,4016,189,4010,209,3998,225,3974,237,3932,248,3810,266,3668,279,3542,288,3541,283,3668,274,3810,260,3931,243,3972,232,3994,221,4005,206,4011,188,4012,150"/>
+<area shape="poly" id="edge78_Node000046_Node000047" title=" " alt="" coords="4052,142,4107,180,4104,184,4049,146"/>
+<area shape="poly" id="edge82_Node000048_Node000004" title=" " alt="" coords="3103,221,3381,273,3380,278,3102,226"/>
+<area shape="poly" id="edge81_Node000048_Node000008" title=" " alt="" coords="2900,226,2703,247,2503,263,2117,283,1789,291,1564,293,1564,288,1789,286,2117,277,2503,257,2703,241,2900,221"/>
+<area shape="poly" id="edge89_Node000049_Node000003" title=" " alt="" coords="538,143,501,159,472,178,463,188,459,199,460,210,467,221,479,230,500,237,562,251,647,262,745,270,954,281,1126,286,1126,292,954,287,745,276,646,267,562,256,498,242,477,234,463,225,455,212,453,198,458,186,468,174,498,154,536,138"/>
+<area shape="poly" id="edge90_Node000049_Node000006" title=" " alt="" coords="676,139,760,180,758,185,673,144"/>
+<area shape="poly" id="edge91_Node000049_Node000008" title=" " alt="" coords="641,147,672,187,692,206,715,221,766,239,834,251,912,258,996,262,1160,265,1288,269,1415,280,1414,286,1288,274,1160,270,996,268,912,264,833,256,765,244,712,226,689,210,668,191,636,150"/>
+<area shape="poly" id="edge88_Node000049_Node000023" title=" " alt="" coords="537,142,386,185,384,180,536,137"/>
+<area shape="rect" id="Node000050" href="$IERS_8hpp.html" title="Declaración de la función IERS que proporciona parámetros del Servicio Internacional de Rotación de l..." alt="" coords="478,183,650,223"/>
+<area shape="poly" id="edge84_Node000049_Node000050" title=" " alt="" coords="601,149,579,184,574,181,597,147"/>
+<area shape="poly" id="edge85_Node000050_Node000003" title=" " alt="" coords="666,220,670,221,920,255,1127,280,1126,285,920,260,669,226,665,225"/>
+<area shape="poly" id="edge87_Node000050_Node000004" title=" " alt="" coords="666,216,713,221,1905,251,3381,286,3380,291,1905,257,713,226,666,221"/>
+<area shape="poly" id="edge86_Node000050_Node000008" title=" " alt="" coords="666,220,670,221,843,240,978,249,1114,256,1288,269,1415,280,1414,286,1288,274,1114,261,978,254,843,245,669,226,665,225"/>
+</map>

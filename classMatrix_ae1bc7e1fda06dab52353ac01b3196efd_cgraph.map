@@ -1,0 +1,7 @@
+<map id="Matrix::operator*" name="Matrix::operator*">
+<area shape="rect" id="Node000001" title="Producto matricial." alt="" coords="5,31,120,56"/>
+<area shape="rect" id="Node000002" href="$classMatrix.html#a2dba13c45127354c9f75ef576f49269b" title="Constructor de matriz." alt="" coords="168,5,265,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,31,152,26,152,31,121,37"/>
+<area shape="rect" id="Node000003" href="$classMatrix.html#a025f8b6a2384b2b54d6049e49351770c" title="Constructor de matriz." alt="" coords="168,55,265,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="121,50,152,55,152,60,120,55"/>
+</map>

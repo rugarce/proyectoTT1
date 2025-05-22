@@ -1,0 +1,10 @@
+<map id="PoleMatrix" name="PoleMatrix">
+<area shape="rect" id="Node000001" title="Genera la matriz de transformación por movimiento polar." alt="" coords="5,31,88,56"/>
+<area shape="rect" id="Node000002" href="$R__x_8cpp.html#ab96741dfe3b3590793f2b318ceed5f53" title="Construye una matriz de rotación 3x3 para rotar un vector alrededor del eje X." alt="" coords="136,5,179,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,31,120,24,121,29,89,37"/>
+<area shape="rect" id="Node000004" href="$R__y_8cpp.html#a25114557991f92fd6b027118c591a98f" title="Construye una matriz de rotación 3x3 para rotar un vector alrededor del eje Y." alt="" coords="136,55,179,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="89,50,121,57,120,62,88,55"/>
+<area shape="rect" id="Node000003" href="$matrix_8cpp.html#a56d60ea1f08402246a7cfd477d69a618" title="Crea una matriz de ceros." alt="" coords="227,31,279,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="180,21,213,30,211,35,179,26"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="179,60,211,51,213,56,180,65"/>
+</map>

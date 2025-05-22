@@ -1,0 +1,10 @@
+<map id="LTC" name="LTC">
+<area shape="rect" id="Node000001" title="Genera la matriz de transformación desde el sistema local tangente." alt="" coords="5,31,52,56"/>
+<area shape="rect" id="Node000002" href="$R__y_8cpp.html#a25114557991f92fd6b027118c591a98f" title="Construye una matriz de rotación 3x3 para rotar un vector alrededor del eje Y." alt="" coords="100,5,143,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,35,84,26,85,31,53,40"/>
+<area shape="rect" id="Node000004" href="$R__z_8cpp.html#a4f688959a9ab144bf27d272e54bf7258" title="Construye una matriz de rotación 3x3 para rotar un vector alrededor del eje Z." alt="" coords="100,55,143,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="53,47,85,55,84,61,51,52"/>
+<area shape="rect" id="Node000003" href="$matrix_8cpp.html#a56d60ea1f08402246a7cfd477d69a618" title="Crea una matriz de ceros." alt="" coords="191,31,243,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="144,21,177,30,175,35,143,26"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="143,60,175,51,177,56,144,65"/>
+</map>

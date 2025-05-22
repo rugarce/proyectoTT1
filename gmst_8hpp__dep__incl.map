@@ -1,0 +1,9 @@
+<map id="/github/workspace/include/gmst.hpp" name="/github/workspace/include/gmst.hpp">
+<area shape="rect" id="Node000001" title="Cabecera de la operación gmst." alt="" coords="167,5,340,46"/>
+<area shape="rect" id="Node000002" href="$gast_8cpp.html" title="Implementación de la operación gast." alt="" coords="5,94,155,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,56,120,96,118,91,199,51"/>
+<area shape="rect" id="Node000003" href="$gmst_8cpp.html" title="Implementación de la operación gmst." alt="" coords="179,94,328,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="256,62,256,94,251,94,251,62"/>
+<area shape="rect" id="Node000004" href="$EKF__GEOS3_8cpp.html" title="Determinación de la órbita inicial mediante los métodos de Gauss y del filtro de Kalman ampliado." alt="" coords="352,94,512,135"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="309,51,393,91,390,96,306,55"/>
+</map>

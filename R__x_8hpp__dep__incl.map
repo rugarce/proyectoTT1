@@ -1,0 +1,9 @@
+<map id="/github/workspace/include/R_x.hpp" name="/github/workspace/include/R_x.hpp">
+<area shape="rect" id="Node000001" title="Cabecera para la matriz de rotación alrededor del eje X." alt="" coords="167,5,340,46"/>
+<area shape="rect" id="Node000002" href="$NutMatrix_8cpp.html" title="Implementación de la matriz de transformación por nutación." alt="" coords="5,94,155,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,56,120,96,118,91,199,51"/>
+<area shape="rect" id="Node000003" href="$PoleMatrix_8cpp.html" title="Implementación de la matriz de transformación por movimiento polar." alt="" coords="179,94,328,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="256,62,256,94,251,94,251,62"/>
+<area shape="rect" id="Node000004" href="$R__x_8cpp.html" title="Implementación de la matriz de rotación alrededor del eje X." alt="" coords="352,94,501,135"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="307,51,389,91,386,96,305,56"/>
+</map>

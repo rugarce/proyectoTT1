@@ -1,0 +1,23 @@
+<map id="/github/workspace/src/LTC.cpp" name="/github/workspace/src/LTC.cpp">
+<area shape="rect" id="Node000001" title="Implementación de la transformación desde el sistema local tangente." alt="" coords="141,5,291,46"/>
+<area shape="rect" id="Node000002" href="$LTC_8hpp.html" title="Cabecera para la transformación de coordenadas desde el sistema geodésico local." alt="" coords="5,94,131,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,49,105,89,103,84,178,44"/>
+<area shape="rect" id="Node000008" href="$R__y_8hpp.html" title="Cabecera para la matriz de rotación alrededor del eje Y." alt="" coords="302,94,424,120"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="254,44,328,84,326,89,251,49"/>
+<area shape="rect" id="Node000009" href="$R__z_8hpp.html" title="Cabecera para la matriz de rotación alrededor del eje Z." alt="" coords="155,94,277,120"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="219,46,219,78,213,78,213,46"/>
+<area shape="rect" id="Node000003" href="$matrix_8hpp.html" title="Cabecera de las operaciones de las matrices." alt="" coords="139,168,274,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="93,118,171,158,168,162,90,123"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="50,241,107,267"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="186,196,115,236,112,231,184,192"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="130,241,190,267"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="201,195,178,230,174,227,197,192"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="309,241,366,267"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="230,192,303,231,301,236,228,196"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="214,241,285,267"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="216,192,237,226,232,229,211,195"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="337,123,248,163,246,158,335,118"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="363,120,345,226,339,225,358,120"/>
+<area shape="poly" id="edge12_Node000009_Node000003" title=" " alt="" coords="217,120,213,153,208,152,212,120"/>
+<area shape="poly" id="edge11_Node000009_Node000006" title=" " alt="" coords="235,118,261,139,289,166,311,197,328,226,323,229,306,199,285,169,258,143,231,122"/>
+</map>

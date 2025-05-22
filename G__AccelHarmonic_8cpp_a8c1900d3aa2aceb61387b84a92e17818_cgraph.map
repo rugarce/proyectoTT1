@@ -1,0 +1,20 @@
+<map id="G_AccelHarmonic" name="G_AccelHarmonic">
+<area shape="rect" id="Node000001" title="Calcula la matriz Jacobiana de la aceleración armónica." alt="" coords="5,256,133,282"/>
+<area shape="rect" id="Node000002" href="$AccelHarmonic_8cpp.html#a97ea72b6a1426f18c34d295e50b8fc4b" title="Operacion AccelHarmonic." alt="" coords="181,132,291,158"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,253,204,165,207,169,90,258"/>
+<area shape="rect" id="Node000004" href="$matrix_8cpp.html#a56d60ea1f08402246a7cfd477d69a618" title="Crea una matriz de ceros." alt="" coords="465,81,518,107"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="133,279,197,286,271,286,309,281,347,273,383,260,416,241,442,216,461,184,475,151,483,122,488,123,480,153,466,187,446,219,419,246,385,265,348,278,310,287,271,291,196,291,132,284"/>
+<area shape="rect" id="Node000008" href="$matrix_8cpp.html#af16352dd8bf82fa480a8a6c3f0f0b383" title="Asigna un vector a la columna n de una matriz." alt="" coords="182,307,290,332"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="115,280,178,299,176,304,113,285"/>
+<area shape="rect" id="Node000003" href="$global_8cpp.html#a1e2e54b5a8bda6f8402f3e8bbe5f3175" title="Operacion lectura GGM03S." alt="" coords="340,5,416,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="249,130,337,48,348,39,351,43,341,52,253,134"/>
+<area shape="poly" id="edge8_Node000002_Node000004" title=" " alt="" coords="256,129,293,108,338,92,397,85,450,87,450,92,397,90,340,97,295,113,258,134"/>
+<area shape="rect" id="Node000005" href="$Legendre_8cpp.html#a55ce532de3c95506384990ae714dd99d" title="Calcula los polinomios de Legendre asociados normalizados y sus derivadas." alt="" coords="340,107,416,132"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="291,132,325,126,326,132,292,138"/>
+<area shape="rect" id="Node000006" href="$matrix_8cpp.html#a4171206f7b54c775745f80c5fb77b2c0" title="Calcula la norma euclídea de un vector." alt="" coords="353,156,403,182"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="292,152,338,159,337,165,291,157"/>
+<area shape="rect" id="Node000007" href="$matrix_8cpp.html#acbd9778b697f9ad3da64ef53b850e2c9" title="Calcula la transpuesta de una matriz." alt="" coords="339,205,417,231"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="264,156,339,195,337,200,262,161"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="400,29,460,70,457,74,397,34"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="416,108,450,101,451,106,417,114"/>
+</map>

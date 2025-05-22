@@ -1,0 +1,7 @@
+<map id="/github/workspace/include/AccelPointMass.hpp" name="/github/workspace/include/AccelPointMass.hpp">
+<area shape="rect" id="Node000001" title="Cabecera de la función que calcula la aceleración gravitatoria generada por un cuerpo puntual." alt="" coords="80,5,253,46"/>
+<area shape="rect" id="Node000002" href="$Accel_8cpp.html" title="Implementación de la operación Accel." alt="" coords="5,94,155,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,59,101,95,98,92,134,55"/>
+<area shape="rect" id="Node000003" href="$AccelPointMass_8cpp.html" title="Implementación de la función que calcula la aceleración gravitatoria generada por un cuerpo puntual." alt="" coords="179,94,328,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,55,236,92,232,95,195,59"/>
+</map>

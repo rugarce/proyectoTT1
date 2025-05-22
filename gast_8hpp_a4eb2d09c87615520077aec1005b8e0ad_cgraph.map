@@ -1,0 +1,8 @@
+<map id="gast" name="gast">
+<area shape="rect" id="Node000001" title="Calcula el Tiempo Sideral Aparente de Greenwich (GAST)." alt="" coords="5,29,52,55"/>
+<area shape="rect" id="Node000002" href="$gmst_8cpp.html#a22a9ee5ea799a7511f4b5b1939c9de76" title="Calcula el tiempo sideral medio de Greenwich (GMST)." alt="" coords="100,29,150,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="52,40,84,40,84,45,52,45"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="107,30,104,21,106,12,113,5,125,3,137,5,144,12,140,16,135,10,125,8,116,10,111,14,109,20,112,28"/>
+<area shape="rect" id="Node000003" href="$Frac_8cpp.html#a92f2f0f91c99cd6bec1a0e9a3b6443fc" title="Calcula la parte fraccional de un número real." alt="" coords="198,29,245,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="150,40,183,40,183,45,150,45"/>
+</map>

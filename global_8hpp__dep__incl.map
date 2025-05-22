@@ -1,0 +1,20 @@
+<map id="/github/workspace/include/global.hpp" name="/github/workspace/include/global.hpp">
+<area shape="rect" id="Node000001" title="Archivo cabecera de operacion global." alt="" coords="314,5,486,46"/>
+<area shape="rect" id="Node000002" href="$IERS_8hpp.html" title="Declaración de la función IERS que proporciona parámetros del Servicio Internacional de Rotación de l..." alt="" coords="314,94,486,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="403,62,403,94,397,94,397,62"/>
+<area shape="rect" id="Node000003" href="$Accel_8cpp.html" title="Implementación de la operación Accel." alt="" coords="5,183,155,223"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="299,41,185,63,138,78,107,96,94,115,86,138,81,182,76,182,81,137,89,113,104,92,135,73,184,58,298,36"/>
+<area shape="rect" id="Node000005" href="$VarEqn_8cpp.html" title="Implementación de la operación VarEqn." alt="" coords="536,183,685,223"/>
+<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="446,53,500,92,553,139,594,180,591,184,549,142,497,96,443,57"/>
+<area shape="rect" id="Node000007" href="$JPL__Eph__DE430_8hpp.html" title="Cabecera de la operacion JPL_Eph_DE430." alt="" coords="118,94,290,135"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="343,55,250,96,248,91,341,50"/>
+<area shape="rect" id="Node000008" href="$AccelHarmonic_8cpp.html" title="Implementación de la operacion AccelHarmonic." alt="" coords="561,94,711,135"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="468,49,583,91,581,96,467,54"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="313,142,153,185,152,180,312,137"/>
+<area shape="rect" id="Node000004" href="$IERS_8cpp.html" title="Implementación de la función IERS que extrae/interpola parámetros de orientación de la Tierra." alt="" coords="179,183,328,223"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="355,145,288,185,285,180,352,141"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="463,138,564,180,562,185,461,143"/>
+<area shape="rect" id="Node000006" href="$EKF__GEOS3_8cpp.html" title="Determinación de la órbita inicial mediante los métodos de Gauss y del filtro de Kalman ampliado." alt="" coords="352,183,512,223"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="415,149,427,181,422,183,410,150"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="165,146,110,184,107,180,162,142"/>
+</map>

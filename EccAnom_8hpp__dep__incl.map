@@ -1,0 +1,7 @@
+<map id="/github/workspace/include/EccAnom.hpp" name="/github/workspace/include/EccAnom.hpp">
+<area shape="rect" id="Node000001" title="Cabecera para el cálculo de la anomalía excéntrica a partir de la media." alt="" coords="83,5,256,46"/>
+<area shape="rect" id="Node000002" href="$EccAnom_8cpp.html" title="Implementación del cálculo de la anomalía excéntrica." alt="" coords="5,94,155,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,59,102,95,98,92,136,55"/>
+<area shape="rect" id="Node000003" href="$tests_8cpp.html" title="Tests de las funciones." alt="" coords="178,94,339,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,55,240,92,237,95,199,59"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="NutMatrix" name="NutMatrix">
+<area shape="rect" id="Node000001" title="Genera la matriz de transformación por nutación." alt="" coords="5,80,83,106"/>
+<area shape="rect" id="Node000002" href="$MeanObliquity_8cpp.html#a11f057ac4e8a0c5a7958f77379e30d40" title="Calcula la oblicuidad media de la eclíptica para un tiempo dado." alt="" coords="131,5,234,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,77,129,40,137,36,140,40,132,45,68,82"/>
+<area shape="rect" id="Node000003" href="$NutAngles_8cpp.html#a8028f5f2ac1a0a2126d8edf6a5ed80c6" title="Operacion NutAngles." alt="" coords="141,55,224,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="83,83,125,75,126,80,84,88"/>
+<area shape="rect" id="Node000005" href="$R__x_8cpp.html#ab96741dfe3b3590793f2b318ceed5f53" title="Construye una matriz de rotación 3x3 para rotar un vector alrededor del eje X." alt="" coords="161,104,204,130"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="84,97,146,108,145,113,83,102"/>
+<area shape="rect" id="Node000006" href="$R__z_8cpp.html#a4f688959a9ab144bf27d272e54bf7258" title="Construye una matriz de rotación 3x3 para rotar un vector alrededor del eje Z." alt="" coords="161,153,204,179"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="69,104,132,140,148,148,145,153,129,145,66,109"/>
+<area shape="rect" id="Node000004" href="$matrix_8cpp.html#a56d60ea1f08402246a7cfd477d69a618" title="Crea una matriz de ceros." alt="" coords="282,104,334,130"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="218,79,268,99,266,104,216,83"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="205,114,267,114,267,120,205,120"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="204,155,267,130,269,135,206,160"/>
+</map>

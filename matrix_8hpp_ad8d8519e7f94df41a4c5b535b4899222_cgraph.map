@@ -1,0 +1,5 @@
+<map id="inv" name="inv">
+<area shape="rect" id="Node000001" title="Calcula la inversa de una matriz." alt="" coords="5,5,44,31"/>
+<area shape="rect" id="Node000002" href="$matrix_8cpp.html#a6d5ff1bcc8ce1f0309a47210e1231c6c" title="Crea una matriz identidad de tamaño n x n." alt="" coords="92,5,133,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,16,76,16,76,21,44,21"/>
+</map>

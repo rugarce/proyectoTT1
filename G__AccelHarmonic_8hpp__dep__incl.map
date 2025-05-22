@@ -1,0 +1,7 @@
+<map id="/github/workspace/include/G_AccelHarmonic.hpp" name="/github/workspace/include/G_AccelHarmonic.hpp">
+<area shape="rect" id="Node000001" title="Cabecera de la operación G_AccelHarmonic." alt="" coords="85,5,257,46"/>
+<area shape="rect" id="Node000002" href="$G__AccelHarmonic_8cpp.html" title="Implementación de la operación G_AccelHarmonic." alt="" coords="5,94,161,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,59,105,95,101,92,138,55"/>
+<area shape="rect" id="Node000003" href="$VarEqn_8cpp.html" title="Implementación de la operación VarEqn." alt="" coords="184,94,334,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="204,55,241,92,237,95,200,59"/>
+</map>

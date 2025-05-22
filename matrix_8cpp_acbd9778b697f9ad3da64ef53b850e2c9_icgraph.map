@@ -1,0 +1,23 @@
+<map id="transpose" name="transpose">
+<area shape="rect" id="Node000001" title="Calcula la transpuesta de una matriz." alt="" coords="459,123,538,149"/>
+<area shape="rect" id="Node000002" href="$Accel_8cpp.html#a28040ec3672b4e1805218ad1cd43bfa0" title="Calcula la derivada del estado orbital (posición y velocidad)." alt="" coords="153,73,208,98"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="476,114,447,86,410,64,384,57,356,53,300,56,249,66,209,78,207,73,248,60,300,50,356,48,385,51,412,59,450,82,480,110"/>
+<area shape="rect" id="Node000003" href="$AccelHarmonic_8cpp.html#a97ea72b6a1426f18c34d295e50b8fc4b" title="Operacion AccelHarmonic." alt="" coords="296,173,407,198"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="446,157,393,175,392,170,444,152"/>
+<area shape="rect" id="Node000005" href="$VarEqn_8cpp.html#a6e153d0ae05034cb5b346189ebb847d3" title="Evalúa las derivadas del estado y la matriz de transición." alt="" coords="5,123,69,149"/>
+<area shape="poly" id="edge12_Node000001_Node000005" title=" " alt="" coords="481,111,452,72,433,54,410,40,368,23,331,13,297,8,264,10,231,16,197,27,118,63,97,76,78,92,50,125,46,121,74,89,93,72,115,58,195,23,230,11,263,4,297,3,332,8,370,18,413,35,436,50,456,68,485,108"/>
+<area shape="rect" id="Node000006" href="$DEInteg_8cpp.html#a7f2e4827e1acc742bb1b4fc9ad6b156a" title="Función principal de integración diferencial utilizando un método adaptativo multistep." alt="" coords="318,123,385,149"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="444,139,386,139,386,134,444,134"/>
+<area shape="rect" id="Node000007" href="$JPL__Eph__DE430_8cpp.html#a5e6fedfbbbe0ca32aa62a9016e7d3293" title="Operacion JPL_Eph_DE430." alt="" coords="292,74,411,100"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="444,121,392,103,393,98,446,116"/>
+<area shape="rect" id="Node000008" href="$MeasUpdate_8cpp.html#ae12754392beb1fd53d392978b396266f" title="Realiza una actualización de medición (filtro de Kalman)." alt="" coords="304,222,399,248"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="476,162,447,188,413,213,392,224,390,219,410,209,444,184,472,158"/>
+<area shape="rect" id="Node000009" href="$TimeUpdate_8cpp.html#a2532be63504dbae7f3a2a57df6770b13" title="Actualiza la matriz de covarianza propagándola temporalmente." alt="" coords="306,271,398,297"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="487,165,457,214,437,240,413,262,396,273,393,269,410,258,433,236,453,211,482,162"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="297,168,290,164,266,142,242,120,207,100,209,95,246,115,270,138,294,159,300,163"/>
+<area shape="rect" id="Node000004" href="$G__AccelHarmonic_8cpp.html#a8c1900d3aa2aceb61387b84a92e17818" title="Calcula la matriz Jacobiana de la aceleración armónica." alt="" coords="117,174,244,200"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="281,189,244,189,244,184,281,183"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="281,172,244,164,148,150,69,142,69,136,149,145,244,159,282,166"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="126,171,68,150,70,145,128,166"/>
+<area shape="poly" id="edge9_Node000007_Node000002" title=" " alt="" coords="276,89,208,88,208,83,276,84"/>
+</map>

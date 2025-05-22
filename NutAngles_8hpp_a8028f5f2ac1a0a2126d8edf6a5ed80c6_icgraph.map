@@ -1,0 +1,11 @@
+<map id="NutAngles" name="NutAngles">
+<area shape="rect" id="Node000001" title="Operacion NutAngles." alt="" coords="253,31,335,56"/>
+<area shape="rect" id="Node000002" href="$EqnEquinox_8cpp.html#a1178917cf376ea4f15cea33c59028635" title="Operacion EqnEquinox." alt="" coords="117,5,205,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,35,205,29,206,24,238,30"/>
+<area shape="rect" id="Node000003" href="$NutMatrix_8cpp.html#ac7fb7e48f2d2d4fd63ac42e17e44ff23" title="Genera la matriz de transformación por nutación." alt="" coords="122,55,200,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="238,56,200,63,199,58,237,51"/>
+<area shape="rect" id="Node000004" href="$Accel_8cpp.html#a28040ec3672b4e1805218ad1cd43bfa0" title="Calcula la derivada del estado orbital (posición y velocidad)." alt="" coords="10,29,64,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="106,59,64,50,65,45,107,54"/>
+<area shape="rect" id="Node000005" href="$VarEqn_8cpp.html#a6e153d0ae05034cb5b346189ebb847d3" title="Evalúa las derivadas del estado y la matriz de transición." alt="" coords="5,79,69,104"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="108,81,70,88,69,83,106,75"/>
+</map>

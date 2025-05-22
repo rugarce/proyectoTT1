@@ -1,0 +1,14 @@
+<map id="/github/workspace/include/global.hpp" name="/github/workspace/include/global.hpp">
+<area shape="rect" id="Node000001" title="Archivo cabecera de operacion global." alt="" coords="153,5,325,46"/>
+<area shape="rect" id="Node000002" href="$matrix_8hpp.html" title="Cabecera de las operaciones de las matrices." alt="" coords="119,94,254,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,48,206,82,201,79,224,45"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="264,168,321,193"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="250,45,269,93,288,152,283,154,264,95,245,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,168,62,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="162,123,74,163,72,158,160,118"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="85,168,144,193"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="177,122,140,158,136,155,173,118"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="206,118,263,156,260,161,203,122"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="168,168,240,193"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="192,119,200,152,195,153,187,121"/>
+</map>

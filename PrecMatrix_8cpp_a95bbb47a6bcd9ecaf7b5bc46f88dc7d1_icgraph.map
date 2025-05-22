@@ -1,0 +1,7 @@
+<map id="PrecMatrix" name="PrecMatrix">
+<area shape="rect" id="Node000001" title="Calcula la matriz de precesión entre dos épocas." alt="" coords="117,31,200,56"/>
+<area shape="rect" id="Node000002" href="$Accel_8cpp.html#a28040ec3672b4e1805218ad1cd43bfa0" title="Calcula la derivada del estado orbital (posición y velocidad)." alt="" coords="10,5,64,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,34,64,26,65,21,102,29"/>
+<area shape="rect" id="Node000003" href="$VarEqn_8cpp.html#a6e153d0ae05034cb5b346189ebb847d3" title="Evalúa las derivadas del estado y la matriz de transición." alt="" coords="5,55,69,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="102,57,70,64,69,59,101,52"/>
+</map>

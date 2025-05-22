@@ -1,0 +1,10 @@
+<map id="PrecMatrix" name="PrecMatrix">
+<area shape="rect" id="Node000001" title="Calcula la matriz de precesión entre dos épocas." alt="" coords="5,31,89,56"/>
+<area shape="rect" id="Node000002" href="$R__y_8cpp.html#a25114557991f92fd6b027118c591a98f" title="Construye una matriz de rotación 3x3 para rotar un vector alrededor del eje Y." alt="" coords="137,5,180,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,31,121,24,122,29,89,37"/>
+<area shape="rect" id="Node000004" href="$R__z_8cpp.html#a4f688959a9ab144bf27d272e54bf7258" title="Construye una matriz de rotación 3x3 para rotar un vector alrededor del eje Z." alt="" coords="137,55,180,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="89,50,122,57,121,62,88,55"/>
+<area shape="rect" id="Node000003" href="$matrix_8cpp.html#a56d60ea1f08402246a7cfd477d69a618" title="Crea una matriz de ceros." alt="" coords="228,31,280,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="181,21,214,30,212,35,180,26"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="180,60,212,51,214,56,181,65"/>
+</map>

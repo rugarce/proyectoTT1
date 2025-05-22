@@ -1,0 +1,13 @@
+<map id="R_x" name="R_x">
+<area shape="rect" id="Node000001" title="Construye una matriz de rotación 3x3 para rotar un vector alrededor del eje X." alt="" coords="247,31,290,56"/>
+<area shape="rect" id="Node000002" href="$NutMatrix_8cpp.html#ac7fb7e48f2d2d4fd63ac42e17e44ff23" title="Genera la matriz de transformación por nutación." alt="" coords="119,5,196,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="231,38,196,30,198,24,232,33"/>
+<area shape="rect" id="Node000005" href="$PoleMatrix_8cpp.html#aa20f72601d5ff91f277b999d15b7d6c9" title="Genera la matriz de transformación por movimiento polar." alt="" coords="117,55,199,80"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="232,54,200,61,199,56,231,49"/>
+<area shape="rect" id="Node000003" href="$Accel_8cpp.html#a28040ec3672b4e1805218ad1cd43bfa0" title="Calcula la derivada del estado orbital (posición y velocidad)." alt="" coords="10,5,64,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,21,65,21,65,16,104,16"/>
+<area shape="rect" id="Node000004" href="$VarEqn_8cpp.html#a6e153d0ae05034cb5b346189ebb847d3" title="Evalúa las derivadas del estado y la matriz de transición." alt="" coords="5,55,69,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="111,40,70,57,68,52,109,35"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="109,51,64,32,66,27,111,46"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="101,70,69,70,69,65,101,65"/>
+</map>

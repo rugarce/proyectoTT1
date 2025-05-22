@@ -1,0 +1,18 @@
+<map id="/github/workspace/src/EccAnom.cpp" name="/github/workspace/src/EccAnom.cpp">
+<area shape="rect" id="Node000001" title="Implementación del cálculo de la anomalía excéntrica." alt="" coords="218,5,367,46"/>
+<area shape="rect" id="Node000002" href="$EccAnom_8hpp.html" title="Cabecera para el cálculo de la anomalía excéntrica a partir de la media." alt="" coords="98,94,254,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="265,49,208,87,205,83,262,44"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="264,241,321,267"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="295,47,295,225,290,225,290,47"/>
+<area shape="rect" id="Node000008" href="$SAT__Const_8hpp.html" title="Constantes físicas y astronómicas utilizadas en el proyecto." alt="" coords="330,94,497,120"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="324,44,384,83,381,88,321,49"/>
+<area shape="rect" id="Node000003" href="$matrix_8hpp.html" title="Cabecera de las operaciones de las matrices." alt="" coords="108,168,244,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="179,120,179,152,174,152,174,120"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,241,62,267"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="153,196,73,236,70,232,151,191"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="85,241,144,267"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="168,195,137,231,133,228,164,192"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="197,192,261,231,258,235,194,196"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="168,241,240,267"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="183,193,196,226,191,228,178,195"/>
+</map>

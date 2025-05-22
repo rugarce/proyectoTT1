@@ -1,0 +1,17 @@
+<map id="/github/workspace/src/AccelPointMass.cpp" name="/github/workspace/src/AccelPointMass.cpp">
+<area shape="rect" id="Node000001" title="Implementación de la función que calcula la aceleración gravitatoria generada por un cuerpo puntual." alt="" coords="175,5,324,46"/>
+<area shape="rect" id="Node000002" href="$AccelPointMass_8hpp.html" title="Cabecera de la función que calcula la aceleración gravitatoria generada por un cuerpo puntual." alt="" coords="85,94,280,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="235,48,205,83,201,80,231,45"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="264,241,321,267"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="268,45,283,67,295,93,302,129,304,165,299,226,294,226,298,165,296,129,290,95,279,70,264,48"/>
+<area shape="rect" id="Node000003" href="$matrix_8hpp.html" title="Cabecera de las operaciones de las matrices." alt="" coords="94,168,229,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="182,121,172,153,167,152,177,119"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="198,118,244,166,282,226,277,229,239,169,194,122"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,241,62,267"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="141,196,70,236,67,231,138,192"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="85,241,144,267"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="156,195,133,230,129,227,152,192"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="185,192,258,231,256,236,182,196"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="168,241,240,267"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="171,192,191,226,187,229,166,195"/>
+</map>

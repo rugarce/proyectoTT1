@@ -1,0 +1,11 @@
+<map id="/github/workspace/include/R_y.hpp" name="/github/workspace/include/R_y.hpp">
+<area shape="rect" id="Node000001" title="Cabecera para la matriz de rotación alrededor del eje Y." alt="" coords="254,5,426,46"/>
+<area shape="rect" id="Node000002" href="$LTC_8cpp.html" title="Implementación de la transformación desde el sistema local tangente." alt="" coords="5,94,155,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="267,54,140,96,138,91,266,49"/>
+<area shape="rect" id="Node000003" href="$PoleMatrix_8cpp.html" title="Implementación de la matriz de transformación por movimiento polar." alt="" coords="179,94,328,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="312,59,275,95,271,92,308,55"/>
+<area shape="rect" id="Node000004" href="$PrecMatrix_8cpp.html" title="Implementación de la operación PrecMatrix." alt="" coords="352,94,501,135"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="372,55,409,92,405,95,368,59"/>
+<area shape="rect" id="Node000005" href="$R__y_8cpp.html" title="Implementación de la matriz de rotación alrededor del eje Y." alt="" coords="525,94,675,135"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="414,49,542,91,540,96,413,54"/>
+</map>

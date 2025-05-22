@@ -1,0 +1,9 @@
+<map id="EqnEquinox" name="EqnEquinox">
+<area shape="rect" id="Node000001" title="Operacion EqnEquinox." alt="" coords="5,31,94,56"/>
+<area shape="rect" id="Node000002" href="$MeanObliquity_8cpp.html#a11f057ac4e8a0c5a7958f77379e30d40" title="Calcula la oblicuidad media de la eclíptica para un tiempo dado." alt="" coords="142,5,245,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,33,126,27,127,33,94,38"/>
+<area shape="rect" id="Node000003" href="$NutAngles_8cpp.html#a8028f5f2ac1a0a2126d8edf6a5ed80c6" title="Operacion NutAngles." alt="" coords="152,55,234,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="94,48,137,55,136,61,94,53"/>
+<area shape="rect" id="Node000004" href="$matrix_8cpp.html#a56d60ea1f08402246a7cfd477d69a618" title="Crea una matriz de ceros." alt="" coords="293,55,345,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="235,65,277,65,277,70,235,70"/>
+</map>

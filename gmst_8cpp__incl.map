@@ -1,0 +1,11 @@
+<map id="/github/workspace/src/gmst.cpp" name="/github/workspace/src/gmst.cpp">
+<area shape="rect" id="Node000001" title="Implementación de la operación gmst." alt="" coords="233,5,382,46"/>
+<area shape="rect" id="Node000002" href="$gmst_8hpp.html" title="Cabecera de la operación gmst." alt="" coords="5,94,135,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="249,49,122,91,120,86,247,44"/>
+<area shape="rect" id="Node000003" href="$Frac_8hpp.html" title="Cabecera de la función que calcula la parte fraccional de un número real." alt="" coords="159,94,285,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="288,48,248,85,244,81,284,44"/>
+<area shape="rect" id="Node000004" href="$SAT__Const_8hpp.html" title="Constantes físicas y astronómicas utilizadas en el proyecto." alt="" coords="309,94,476,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="330,44,370,81,367,85,327,48"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="500,94,557,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="364,44,487,88,485,93,362,49"/>
+</map>
