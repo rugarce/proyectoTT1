@@ -1534,7 +1534,6 @@ int Accel_01()
     exp(6) = -2.99374240926662;  
 
     Matrix result = Accel(x, Y);
-    cout << "result\n"<<result<<"\n";
     _assert(m_equals(result, exp, 1e-5));
     return 0;	
 }

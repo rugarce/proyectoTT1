@@ -32,6 +32,7 @@
 
 #include <iostream>
 #include <cmath>
+#include <ctime>
 
 using namespace std;
 
@@ -50,15 +51,15 @@ int main()
     double lon = SAT_Const::Rad * (-158.2706);
     double alt = 300.20;
 
-    Matrix Rs = zeros(3);
+    Matrix& Rs = zeros(3);
     Rs = transpose(Position(lon, lat, alt));
 
     double Mjd1 = obs(1, 1);
     double Mjd2 = obs(9, 1);
     double Mjd3 = obs(18, 1);
 
-    Matrix r2 = zeros(3);
-    Matrix v2 = zeros(3);
+    Matrix& r2 = zeros(3);
+    Matrix& v2 = zeros(3);
 
     r2(1) = 6221397.62857869;
     r2(2) = 2867713.77965738;
@@ -67,7 +68,7 @@ int main()
     v2(2) = -2752.21591588204;
     v2(3) = -7507.99940987031;
 
-    Matrix Y0_apr = union_vector(r2, v2);
+    Matrix& Y0_apr = union_vector(r2, v2);
     double Mjd0 = Mjday(1995, 1, 29, 2, 38, 0);
 
     double Mjd_UTC = obs(9, 1);
@@ -79,32 +80,34 @@ int main()
     AuxParam.planets = 1;
 
     int n_eqn = 6;
-    Matrix Y = DEInteg(Accel, 0.0, -(obs(9, 1) - Mjd0) * 86400.0, 1e-13, 1e-6, 6, transpose(Y0_apr));
-    Matrix P = zeros(6, 6);
+    Matrix& Y = DEInteg(Accel, 0.0, -(obs(9, 1) - Mjd0) * 86400.0, 1e-13, 1e-6, 6, transpose(Y0_apr));
+    Matrix& P = zeros(6, 6);
     for (int i = 1; i <= 3; ++i)
         P(i, i) = 1e8;
     for (int i = 4; i <= 6; ++i)
         P(i, i) = 1e3;
 
-    Matrix LT = LTC(lon, lat);
+    Matrix& LT = LTC(lon, lat);
 
-    Matrix yPhi = zeros(42, 1);
-    Matrix Phi = zeros(6, 6);
+    Matrix& yPhi = zeros(42, 1);
+    Matrix& Phi = zeros(6, 6);
     double t = 0.0;
 
     double t_old, Mjd_TT, Mjd_UT1;
     double theta;
-    Matrix Y_old = zeros(6, 1);
-    Matrix U = zeros(3, 3);
-    Matrix r;
-    Matrix s;
-    Matrix dAdY;
-    Matrix dEdY;
+    Matrix& Y_old = zeros(6, 1);
+    Matrix& U = zeros(3, 3);
+    Matrix& r = zeros(3,1);
+    Matrix& s = zeros(3,1);
+    Matrix& dAdY = zeros(6);
+    Matrix& dEdY = zeros(6);
     double Dist;
-    Matrix dDdY;
-    Matrix dDds;
+    Matrix& dDdY = zeros(6);
+    Matrix& dDds = zeros(3);
     double Azim, Elev;
-    Matrix dAds, dEds, K;
+    Matrix& dAds = zeros(3);
+    Matrix& dEds = zeros(3);
+    Matrix& K = zeros(6,1);
     double x_pole, y_pole, UT1_UTC, LOD, dpsi, deps, dx_pole, dy_pole, TAI_UTC;
     double UT1_TAI, UTC_GPS, UT1_GPS, TT_UTC, GPS_UTC;
 
@@ -166,7 +169,7 @@ int main()
         dDdY = union_vector(dDds * LT * U, zeros(3));
         tie(K, Y, P) = MeasUpdate(Y, obs(i, 4), Dist, sigma_range, dDdY, P, 6);
     }
-    cout << "aaaaaaaaaaaa\n";
+
     tie(x_pole, y_pole, UT1_UTC, LOD, dpsi, deps, dx_pole, dy_pole, TAI_UTC) = IERS(obs(46, 1), "l");
     tie(UT1_TAI, UTC_GPS, UT1_GPS, TT_UTC, GPS_UTC) = timediff(UT1_UTC, TAI_UTC);
     Mjd_TT = Mjd_UTC + TT_UTC / 86400.0;
@@ -174,9 +177,9 @@ int main()
     AuxParam.Mjd_UTC = Mjd_UTC;
     AuxParam.Mjd_TT = Mjd_TT;
 
-    Matrix Y0 = transpose(DEInteg(Accel, 0.0, -(obs(46, 1) - obs(1, 1)) * 86400.0, 1e-13, 1e-6, 6, Y));
+    Matrix& Y0 = transpose(DEInteg(Accel, 0.0, -(obs(46, 1) - obs(1, 1)) * 86400.0, 1e-13, 1e-6, 6, Y));
 
-    Matrix Y_true(6);
+    Matrix& Y_true = zeros(6);
 
     Y_true(1) = 5753.173e3;
     Y_true(2) = 2673.361e3;
